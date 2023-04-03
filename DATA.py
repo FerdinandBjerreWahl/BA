@@ -78,7 +78,7 @@ def to_date(data,time='y'):
 
 
 def load_or_process_data(file_path, prefixes, start_date, end_date):
-    # Check if processed data exists in a pickle file
+    
     pickle_file_path = f"{file_path}.pickle"
     if os.path.isfile(pickle_file_path):
         with open(pickle_file_path, "rb") as f:
@@ -86,13 +86,12 @@ def load_or_process_data(file_path, prefixes, start_date, end_date):
             isins = pickle.load(f)
             stock_data = pickle.load(f)
     else:
-        # If processed data does not exist, read and process data
         data = read_data(file_path)
         isins = get_isins(data)
         stock_data = concatenate_data(prefixes, isins, start_date, end_date)
         stock_data = remove_null_columns(stock_data)
 
-        # Save processed data to a pickle file for future use
+       
         with open(pickle_file_path, "wb") as f:
             pickle.dump(data, f)
             pickle.dump(isins, f)
