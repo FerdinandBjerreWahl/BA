@@ -1,0 +1,453 @@
+Isin,CurrencyCode,Ticker,company_name,environment_grade,environment_level,environment_score,esg_id,exchange_symbol,governance_grade,governance_level,governance_score,last_processing_date,social_grade,social_level,social_score,stock_symbol,total,total_grade,total_level
+US0268747849,USD,System.Object[],"American International Group, Inc.",A,High,538,390,NYSE,BB,Medium,314,20230221,BB,Medium,315,AIG,1167,BBB,High
+US03027X1000,USD,System.Object[],American Tower Corporation (REIT),A,High,515,415,NYSE,BB,Medium,305,20230221,BB,Medium,314,AMT,1134,BBB,High
+US0304201033,USD,System.Object[],"American Water Works Company, Inc.",AA,Excellent,680,418,NYSE,BB,Medium,300,20230221,BBB,High,407,AWK,1387,A,High
+US03076C1062,USD,System.Object[],"Ameriprise Financial, Inc.",A,High,510,422,NYSE,B,Medium,277,20230221,BB,Medium,322,AMP,1109,BBB,High
+US03073E1055,USD,System.Object[],AmerisourceBergen Corporation,A,High,550,426,NYSE,BB,Medium,300,20230221,BB,Medium,315,ABC,1165,BBB,High
+US0311001004,USD,System.Object[],"AMETEK, Inc.",A,High,545,430,NYSE,BB,Medium,300,20230221,BB,Medium,330,AME,1175,BBB,High
+US0311621009,USD,System.Object[],Amgen Inc.,A,High,530,432,NASDAQ,BB,Medium,310,20230221,BB,Medium,322,AMGN,1162,BBB,High
+US0320951017,USD,System.Object[],Amphenol Corporation,A,High,515,439,NYSE,BB,Medium,315,20230221,BB,Medium,326,APH,1156,BBB,High
+US0326541051,USD,System.Object[],"Analog Devices, Inc.",A,High,528,448,NASDAQ,BB,Medium,318,20230221,BB,Medium,318,ADI,1164,BBB,High
+US03662Q1058,USD,System.Object[],"ANSYS, Inc.",A,High,570,473,NASDAQ,BB,Medium,310,20230221,BB,Medium,335,ANSS,1215,A,High
+US0378331005,USD,System.Object[],Apple Inc.,BB,Medium,355,502,NASDAQ,B,Medium,255,20230221,B,Medium,281,AAPL,891,BB,Medium
+US0382221051,USD,System.Object[],"Applied Materials, Inc.",A,High,507,508,NASDAQ,BB,Medium,300,20230221,BB,Medium,300,AMAT,1107,BBB,High
+JE00B783TY65,USD,System.Object[],Aptiv PLC,A,High,530,71797,NYSE,BB,Medium,310,20230301,BB,Medium,363,APTV,1203,A,High
+US0394831020,USD,System.Object[],Archer-Daniels-Midland Company,A,High,566,543,NYSE,BB,Medium,310,20230221,BB,Medium,331,ADM,1207,A,High
+US0404131064,USD,System.Object[],"Arista Networks, Inc.",A,High,515,565,NYSE,BB,Medium,300,20230221,BB,Medium,341,ANET,1156,BBB,High
+US3635761097,USD,System.Object[],Arthur J. Gallagher & Co.,A,High,515,586,NYSE,BB,Medium,320,20230221,BB,Medium,345,AJG,1180,BBB,High
+US04621X1081,USD,System.Object[],"Assurant, Inc.",A,High,500,628,NYSE,BB,Medium,300,20230221,BB,Medium,300,AIZ,1100,BBB,High
+US0258161092,USD,System.Object[],American Express Company,B,Medium,205,383,NYSE,B,Medium,205,20230221,B,Medium,229,AXP,639,B,Medium
+US02376R1023,USD,System.Object[],American Airlines Group Inc.,BBB,High,477,362,NASDAQ,B,Medium,288,20230221,BB,Medium,333,AAL,1098,BBB,High
+US0236081024,USD,System.Object[],Ameren Corporation,BBB,High,455,356,NYSE,BB,Medium,318,20230221,BB,Medium,330,AEE,1103,BBB,High
+US0231351067,USD,System.Object[],"Amazon.com, Inc.",AA,Excellent,660,342,NASDAQ,BBB,High,460,20230221,BB,Medium,308,AMZN,1428,A,High
+US02209S1033,USD,System.Object[],"Altria Group, Inc.",A,High,505,326,NYSE,BB,Medium,300,20230221,BB,Medium,301,MO,1106,BBB,High
+US02079K1079,USD,System.Object[],Alphabet Inc,B,Medium,235,70870,NASDAQ,BB,Medium,315,20230301,BB,Medium,313,GOOG,863,BB,Medium
+US0188021085,USD,System.Object[],Alliant Energy Corporation,A,High,508,280,NASDAQ,BB,Medium,320,20230221,BB,Medium,335,LNT,1163,BBB,High
+IE00BFRT3W74,USD,System.Object[],Allegion plc,A,High,567,271,NYSE,BB,Medium,325,20230221,BB,Medium,318,ALLE,1210,A,High
+US0162551016,USD,System.Object[],"Align Technology, Inc.",B,Medium,250,255,NASDAQ,B,Medium,250,20230221,B,Medium,266,ALGN,766,BB,Medium
+US0152711091,USD,System.Object[],"Alexandria Real Estate Equities, Inc.",A,High,538,246,NYSE,BB,Medium,300,20230221,BB,Medium,328,ARE,1166,BBB,High
+US0126531013,USD,System.Object[],Albemarle Corporation,A,High,538,239,NYSE,BB,Medium,305,20230221,BB,Medium,335,ALB,1178,BBB,High
+US0116591092,USD,System.Object[],"Alaska Air Group, Inc.",A,High,525,234,NYSE,B,Medium,293,20230221,BB,Medium,303,ALK,1121,BBB,High
+US00971T1016,USD,System.Object[],"Akamai Technologies, Inc.",AA,Excellent,620,220,NASDAQ,BB,Medium,350,20230221,BB,Medium,348,AKAM,1318,A,High
+US0091581068,USD,System.Object[],"Air Products and Chemicals, Inc.",AA,Excellent,700,209,NYSE,BB,Medium,305,20230221,BB,Medium,382,APD,1387,A,High
+US00846U1016,USD,System.Object[],"Agilent Technologies, Inc.",A,High,548,182,NYSE,BB,Medium,300,20230221,B,Medium,226,A,1074,BBB,High
+US0010551028,USD,System.Object[],Aflac Incorporated,A,High,500,168,NYSE,B,Medium,270,20230221,BB,Medium,300,AFL,1070,BBB,High
+US0079031078,USD,System.Object[],"Advanced Micro Devices, Inc.",B,Medium,210,132,NASDAQ,B,Medium,200,20230221,B,Medium,211,AMD,621,B,Medium
+US00751Y1064,USD,System.Object[],"Advance Auto Parts, Inc.",B,Medium,242,125,NYSE,B,Medium,210,20230221,B,Medium,294,AAP,746,B,Medium
+US00724F1012,USD,System.Object[],Adobe Inc.,B,Medium,245,121,NASDAQ,B,Medium,240,20230221,B,Medium,204,ADBE,689,B,Medium
+US00507V1098,USD,System.Object[],"Activision Blizzard, Inc.",B,Medium,285,95,NASDAQ,BB,Medium,330,20230221,BB,Medium,341,ATVI,956,BBB,High
+IE00B4BNMY34,USD,System.Object[],Accenture plc,A,High,570,75,NYSE,BB,Medium,345,20230221,BB,Medium,319,ACN,1234,A,High
+US00287Y1091,USD,System.Object[],AbbVie Inc.,A,High,500,45,NYSE,BB,Medium,308,20230221,BB,Medium,305,ABBV,1113,BBB,High
+US0028241000,USD,System.Object[],Abbott Laboratories,A,High,520,44,NYSE,BB,Medium,354,20230221,BB,Medium,355,ABT,1229,A,High
+US8318652091,USD,System.Object[],A. O. Smith Corporation,A,High,528,29,NYSE,BB,Medium,310,20230221,BB,Medium,320,AOS,1158,BBB,High
+US88579Y1010,USD,System.Object[],3M Company,A,High,517,16,NYSE,BB,Medium,305,20230221,BB,Medium,331,MMM,1153,BBB,High
+US12541W2098,USD,System.Object[],"C.H. Robinson Worldwide, Inc.",A,High,505,1225,NASDAQ,BB,Medium,310,20230221,BB,Medium,302,CHRW,1117,BBB,High
+US1273871087,USD,System.Object[],"Cadence Design Systems, Inc.",A,High,555,1236,NASDAQ,BB,Medium,340,20230221,BB,Medium,312,CDNS,1207,A,High
+US1344291091,USD,System.Object[],Campbell Soup Company,A,High,592,1273,NYSE,BB,Medium,328,20230221,BB,Medium,350,CPB,1270,A,High
+US14040H1059,USD,System.Object[],Capital One Financial Corporation,A,High,580,1328,NYSE,BB,Medium,310,20230221,BB,Medium,302,COF,1192,BBB,High
+BMG169621056,USD,System.Object[],Bunge Limited,BBB,High,489,1207,NYSE,BB,Medium,310,20230221,B,Medium,240,BG,1039,BBB,High
+US11133T1034,USD,System.Object[],"Broadridge Financial Solutions, Inc.",AA,Excellent,637,1169,NYSE,BB,Medium,373,20230221,BB,Medium,366,BR,1376,A,High
+US1101221083,USD,System.Object[],Bristol-Myers Squibb Company,A,High,530,1161,NYSE,BB,Medium,305,20230221,BB,Medium,330,BMY,1165,BBB,High
+US1011371077,USD,System.Object[],Boston Scientific Corporation,A,High,535,1114,NYSE,BB,Medium,305,20230221,BB,Medium,356,BSX,1196,BBB,High
+US1011211018,USD,System.Object[],"Boston Properties, Inc.",A,High,528,1113,NYSE,BB,Medium,300,20230221,BB,Medium,347,BXP,1175,BBB,High
+US0997241064,USD,System.Object[],BorgWarner Inc.,A,High,515,1107,NYSE,BB,Medium,300,20230221,BB,Medium,326,BWA,1141,BBB,High
+US0970231058,USD,System.Object[],Bangkok Airways Public Company Limited,B,Medium,220,24634,BKK,B,Medium,235,20230226,B,Medium,224,BA,679,B,Medium
+US09062X1037,USD,System.Object[],Biogen Inc.,A,High,505,959,NASDAQ,BB,Medium,300,20230221,BB,Medium,301,BIIB,1106,BBB,High
+US09073M1045,USD,System.Object[],Bio-Techne Corporation,A,High,526,988,NASDAQ,BB,Medium,300,20230221,B,Medium,274,TECH,1100,BBB,High
+US0905722072,USD,System.Object[],"Bio-Rad Laboratories, Inc.",BB,Medium,310,978,NYSE,BB,Medium,300,20230221,B,Medium,227,BIO,837,BB,Medium
+US0865161014,USD,System.Object[],"Best Buy Co., Inc.",BBB,High,495,929,NYSE,BB,Medium,305,20230221,B,Medium,237,BBY,1037,BBB,High
+US0846701086,USD,System.Object[],Berkshire Hathaway Inc.,B,Medium,250,926,NASDAQ,B,Medium,250,20230221,B,Medium,267,BRK-A,767,BB,Medium
+US0758871091,USD,System.Object[],"Becton, Dickinson and Company",A,High,535,893,NYSE,BB,Medium,300,20230221,BB,Medium,309,BDX,1144,BBB,High
+US0718131099,USD,System.Object[],Baxter International Inc.,A,High,570,869,NYSE,BB,Medium,330,20230221,BB,Medium,375,BAX,1275,A,High
+US0708301041,USD,System.Object[],"Bath & Body Works, Inc.",A,High,530,73951,NYSE,BB,Medium,335,20230301,BB,Medium,328,BBWI,1193,BBB,High
+US0605051046,USD,System.Object[],Bank of America Corporation,B,Medium,210,819,NYSE,B,Medium,255,20230221,BB,Medium,393,BAC,858,BB,Medium
+US05722G1004,USD,System.Object[],Baker Hughes Company,BBB,High,435,71836,NYSE,BB,Medium,300,20230301,BB,Medium,302,BKR,1037,BBB,High
+US0536111091,USD,System.Object[],Avery Dennison Corporation,A,High,540,727,NYSE,BB,Medium,320,20230221,BB,Medium,353,AVY,1213,A,High
+US0534841012,USD,System.Object[],"AvalonBay Communities, Inc.",A,High,500,720,NYSE,BB,Medium,300,20230221,BB,Medium,300,AVB,1100,BBB,High
+US0533321024,USD,System.Object[],"AutoZone, Inc.",B,Medium,235,715,NYSE,B,Medium,200,20230221,B,Medium,202,AZO,637,B,Medium
+US0530151036,USD,System.Object[],"Automatic Data Processing, Inc.",A,High,520,713,NASDAQ,BB,Medium,300,20230221,BB,Medium,333,ADP,1153,BBB,High
+US0527691069,USD,System.Object[],"Autodesk, Inc.",A,High,555,710,NASDAQ,BB,Medium,345,20230323,BB,Medium,327,ADSK,1227,A,High
+US0495601058,USD,System.Object[],Atmos Energy Corporation,BBB,High,450,669,NYSE,BB,Medium,340,20230221,BB,Medium,333,ATO,1123,BBB,High
+US00206R1023,USD,System.Object[],AT&T Inc.,B,Medium,220,643,NYSE,BB,Medium,300,20230221,B,Medium,200,T,720,B,Medium
+US1924461023,USD,System.Object[],Cognizant Technology Solutions Corporation,A,High,555,1740,NASDAQ,BB,Medium,360,20230221,BB,Medium,310,CTSH,1225,A,High
+US20030N1019,USD,System.Object[],Comcast Corporation,A,High,505,1766,NASDAQ,BB,Medium,300,20230221,BB,Medium,304,CMCSA,1109,BBB,High
+US2003401070,USD,System.Object[],Comerica Incorporated,BB,Medium,398,1767,NYSE,B,Medium,235,20230221,BB,Medium,304,CMA,937,BBB,High
+US2058871029,USD,System.Object[],"Conagra Brands, Inc.",A,High,525,1832,NYSE,BB,Medium,300,20230221,BB,Medium,326,CAG,1151,BBB,High
+US20825C1045,USD,System.Object[],ConocoPhillips,AA,Excellent,600,1851,NYSE,BB,Medium,300,20230221,BB,Medium,321,COP,1221,A,High
+US1941621039,USD,System.Object[],Colgate-Palmolive Company,A,High,540,1750,NYSE,BB,Medium,305,20230221,BB,Medium,300,CL,1145,BBB,High
+US1912161007,USD,System.Object[],The Coca-Cola Company,A,High,500,1724,NYSE,BB,Medium,300,20230221,BB,Medium,300,KO,1100,BBB,High
+US1258961002,USD,System.Object[],CMS Energy Corporation,BB,Medium,338,1711,NYSE,C,Low,75,20230221,BBB,High,434,CMS,847,BB,Medium
+US1890541097,USD,System.Object[],The Clorox Company,AA,Excellent,635,1703,NYSE,BB,Medium,310,20230221,BB,Medium,326,CLX,1271,A,High
+US1746101054,USD,System.Object[],"Citizens Financial Group, Inc.",BB,Medium,375,1658,NYSE,BB,Medium,336,20230221,BB,Medium,371,CFG,1082,BBB,High
+US1729674242,USD,System.Object[],Citigroup Inc.,A,High,560,1650,NYSE,BB,Medium,310,20230221,BB,Medium,302,C,1172,BBB,High
+US17275R1023,USD,System.Object[],"Cisco Systems, Inc.",B,Medium,235,73680,NASDAQ,B,Medium,230,20230301,A,High,540,CSCO,1005,BBB,High
+US1729081059,USD,System.Object[],Cintas Corporation,A,High,500,1639,NASDAQ,BB,Medium,300,20230221,BB,Medium,300,CTAS,1100,BBB,High
+US1720621010,USD,System.Object[],Cincinnati Financial Corporation,B,Medium,240,1634,NASDAQ,B,Medium,230,20230221,B,Medium,275,CINF,745,B,Medium
+US1713401024,USD,System.Object[],"Church & Dwight Co., Inc.",A,High,590,1615,NYSE,BB,Medium,305,20230221,BB,Medium,301,CHD,1196,BBB,High
+US1696561059,USD,System.Object[],"Chipotle Mexican Grill, Inc.",B,Medium,205,1600,NYSE,B,Medium,200,20230221,B,Medium,206,CMG,611,B,Medium
+US1667641005,USD,System.Object[],CEMATRIX Corporation,CC,Low,110,11572,CVE,B,Medium,210,20230223,B,Medium,217,CVX,537,CCC,Low
+US16119P1084,USD,System.Object[],"Charter Communications, Inc.",A,High,500,1493,NASDAQ,BB,Medium,300,20230221,BB,Medium,300,CHTR,1100,BBB,High
+US8085131055,USD,System.Object[],The Charles Schwab Corporation,A,High,500,1491,NYSE,BB,Medium,300,20230221,BB,Medium,300,SCHW,1100,BBB,High
+US1598641074,USD,System.Object[],"Charles River Laboratories International, Inc.",A,High,515,1490,NYSE,B,Medium,235,20230221,BB,Medium,322,CRL,1072,BBB,High
+US1252691001,USD,System.Object[],"CF Industries Holdings, Inc.",AA,Excellent,656,1475,NYSE,BB,Medium,315,20230221,BB,Medium,370,CF,1341,A,High
+US15189T1079,USD,System.Object[],"CenterPoint Energy, Inc.",BBB,High,479,1442,NYSE,B,Medium,230,20230221,BB,Medium,340,CNP,1049,BBB,High
+US15135B1017,USD,System.Object[],Centene Corporation,A,High,523,1440,NYSE,BB,Medium,333,20230221,BB,Medium,303,CNC,1159,BBB,High
+US1508701034,USD,System.Object[],Credito Emiliano,A,High,515,66704,BIT,BB,Medium,300,20230228,BB,Medium,315,CE,1130,BBB,High
+US12514G1085,USD,System.Object[],CDW Corporation,BB,Medium,318,1413,NASDAQ,B,Medium,240,20230221,B,Medium,231,CDW,789,BB,Medium
+US12504L1098,USD,System.Object[],"CBRE Group, Inc.",B,Medium,230,71856,NYSE,B,Medium,200,20230301,B,Medium,204,CBRE,634,B,Medium
+US1491231015,USD,System.Object[],Caxton and CTP Publishers and Printers Limited,BB,Medium,363,25679,JSE,BB,Medium,300,20230226,B,Medium,272,CAT,935,BBB,High
+US1488061029,USD,System.Object[],"Catalent, Inc.",BBB,High,488,1392,NYSE,BB,Medium,300,20230221,BB,Medium,303,CTLT,1091,BBB,High
+US14448C1045,USD,System.Object[],Carrs Group plc,B,Medium,215,9649,LON,B,Medium,239,20230223,B,Medium,293,CARR,747,B,Medium
+PA1436583006,USD,System.Object[],Carnival Corporation & Plc,A,High,535,1367,NYSE,BB,Medium,305,20230221,BB,Medium,306,CCL,1146,BBB,High
+US1431301027,USD,System.Object[],"CarMax, Inc.",B,Medium,261,1365,NYSE,BB,Medium,300,20230221,B,Medium,218,KMX,779,BB,Medium
+US14149Y1082,USD,System.Object[],"Cardinal Health, Inc.",A,High,540,1350,NYSE,BB,Medium,300,20230221,BB,Medium,313,CAH,1153,BBB,High
+US25754A2015,USD,System.Object[],"Dominos Pizza, Inc.",B,Medium,205,2223,NYSE,B,Medium,200,20230222,B,Medium,218,DPZ,623,B,Medium
+US25746U1097,USD,System.Object[],"Dominion Energy, Inc.",A,High,502,2220,NYSE,BB,Medium,310,20230222,BB,Medium,327,D,1139,BBB,High
+US2567461080,USD,System.Object[],"Dollar Tree, Inc.",B,Medium,245,2217,NASDAQ,B,Medium,200,20230222,B,Medium,224,DLTR,669,B,Medium
+US2566771059,USD,System.Object[],Dollar General Corporation,B,Medium,297,2216,NYSE,B,Medium,200,20230222,B,Medium,217,DG,714,B,Medium
+US25470M1099,USD,System.Object[],DISH Network Corporation,B,Medium,205,2201,NASDAQ,B,Medium,215,20230222,B,Medium,261,DISH,681,B,Medium
+US2547091080,USD,System.Object[],Discover Financial Services,BBB,High,420,2198,NYSE,BB,Medium,320,20230222,BB,Medium,329,DFS,1069,BBB,High
+US2538681030,USD,System.Object[],"Digital Realty Trust, Inc.",A,High,520,2185,NYSE,BB,Medium,300,20230222,BB,Medium,319,DLR,1139,BBB,High
+US25278X1090,USD,System.Object[],"Diamondback Energy, Inc.",BBB,High,467,2166,NASDAQ,BB,Medium,305,20230222,B,Medium,266,FANG,1038,BBB,High
+US2521311074,USD,System.Object[],"DexCom, Inc.",B,Medium,225,2155,NASDAQ,B,Medium,205,20230222,B,Medium,227,DXCM,657,B,Medium
+US25179M1036,USD,System.Object[],Devon Energy Corporation,BBB,High,445,2151,NYSE,BB,Medium,300,20230222,BB,Medium,301,DVN,1046,BBB,High
+US24906P1093,USD,System.Object[],DENTSPLY SIRONA Inc.,A,High,530,2136,NASDAQ,BB,Medium,322,20230222,BB,Medium,302,XRAY,1154,BBB,High
+US2473617023,USD,System.Object[],"Delta Air Lines, Inc.",A,High,525,2128,NYSE,BB,Medium,305,20230222,BB,Medium,343,DAL,1173,BBB,High
+US2441991054,USD,System.Object[],Deere & Company,A,High,545,2117,NYSE,BB,Medium,305,20230222,BB,Medium,344,DE,1194,BBB,High
+US2371941053,USD,System.Object[],"Darden Restaurants, Inc.",A,High,505,2082,NYSE,BB,Medium,300,20230221,BB,Medium,303,DRI,1108,BBB,High
+US2358511028,USD,System.Object[],Danaher Corporation,A,High,525,2074,NYSE,BB,Medium,300,20230221,BB,Medium,309,DHR,1134,BBB,High
+US23331A1097,USD,System.Object[],"D.R. Horton, Inc.",B,Medium,275,2054,NYSE,B,Medium,200,20230221,B,Medium,205,DHI,680,B,Medium
+US1266501006,USD,System.Object[],CVS Health Corporation,A,High,505,2027,NYSE,BB,Medium,300,20230221,BB,Medium,321,CVS,1126,BBB,High
+US2310211063,USD,System.Object[],Cummins Inc.,A,High,505,2012,NYSE,BB,Medium,305,20230221,BB,Medium,303,CMI,1113,BBB,High
+US1264081035,USD,System.Object[],CSX Corporation,A,High,565,1999,NASDAQ,BB,Medium,321,20230221,BB,Medium,318,CSX,1204,A,High
+US22822V1017,USD,System.Object[],Crown Castle International Corp. (REIT),A,High,530,1979,NYSE,BB,Medium,318,20230221,BB,Medium,336,CCI,1184,BBB,High
+US22160K1051,USD,System.Object[],Costco Wholesale Corporation,A,High,545,1927,NASDAQ,B,Medium,205,20230221,BB,Medium,323,COST,1073,BBB,High
+US22160N1090,USD,System.Object[],"CoStar Group, Inc.",BB,Medium,340,1925,NASDAQ,BB,Medium,300,20230221,B,Medium,299,CSGP,939,BBB,High
+US22052L1044,USD,System.Object[],"Corteva, Inc.",AA,Excellent,608,71886,NYSE,BB,Medium,330,20230301,BB,Medium,306,CTVA,1244,A,High
+US2193501051,USD,System.Object[],Corning Incorporated,BB,Medium,325,1904,NYSE,B,Medium,273,20230221,BB,Medium,300,GLW,898,BB,Medium
+US2172041061,USD,System.Object[],"Copart, Inc.",B,Medium,230,1883,NASDAQ,B,Medium,205,20230221,B,Medium,202,CPRT,637,B,Medium
+US2166484020,USD,System.Object[],"The Cooper Companies, Inc.",A,High,500,1878,NYSE,BB,Medium,300,20230221,BB,Medium,300,COO,1100,BBB,High
+US21036P1084,USD,System.Object[],"Constellation Brands, Inc.",A,High,580,1860,NYSE,BB,Medium,313,20230221,BB,Medium,302,STZ,1195,BBB,High
+US2091151041,USD,System.Object[],"Consolidated Edison, Inc.",AA,Excellent,600,1855,NYSE,BB,Medium,320,20230221,BBB,High,421,ED,1341,A,High
+US29355A1079,USD,System.Object[],"Enphase Energy, Inc.",A,High,570,2494,NASDAQ,BB,Medium,340,20230222,BB,Medium,305,ENPH,1215,A,High
+US29364G1031,USD,System.Object[],Entergy Corporation,BBB,High,430,2505,NYSE,BB,Medium,300,20230222,BB,Medium,312,ETR,1042,BBB,High
+US26875P1012,USD,System.Object[],"EOG Resources, Inc.",A,High,522,2532,NYSE,B,Medium,240,20230222,B,Medium,252,EOG,1014,BBB,High
+US2910111044,USD,System.Object[],Emerson Electric Co.,A,High,510,2428,NYSE,BB,Medium,305,20230222,BB,Medium,304,EMR,1119,BBB,High
+US5324571083,USD,System.Object[],Eli Lilly and Company,A,High,500,2403,NYSE,BB,Medium,318,20230222,BB,Medium,322,LLY,1140,BBB,High
+US2855121099,USD,System.Object[],Electronic Arts Inc.,BB,Medium,370,2391,NASDAQ,B,Medium,240,20230222,BB,Medium,306,EA,916,BBB,High
+US28176E1082,USD,System.Object[],Edwards Lifesciences Corporation,BB,Medium,355,2366,NYSE,BB,Medium,300,20230222,BB,Medium,306,EW,961,BBB,High
+US2810201077,USD,System.Object[],Edison International,A,High,511,2361,NYSE,BB,Medium,300,20230222,BBB,High,418,EIX,1229,A,High
+US2788651006,USD,System.Object[],Ecolab Inc.,A,High,566,2350,NYSE,BB,Medium,355,20230222,BB,Medium,317,ECL,1238,A,High
+US2786421030,USD,System.Object[],eBay Inc.,A,High,515,2336,NASDAQ,BB,Medium,300,20230222,BB,Medium,302,EBAY,1117,BBB,High
+IE00B8KQN827,USD,System.Object[],Eaton Corporation plc,A,High,518,2325,NYSE,BB,Medium,305,20230222,BB,Medium,303,ETN,1126,BBB,High
+US2774321002,USD,System.Object[],Eastman Chemical Company,AA,Excellent,648,2321,NYSE,BB,Medium,315,20230222,BB,Medium,313,EMN,1276,A,High
+US23355L1061,USD,System.Object[],DXC Technology Company,A,High,505,71915,NYSE,BB,Medium,305,20230301,BB,Medium,311,DXC,1121,BBB,High
+US26441C2044,USD,System.Object[],Duke Energy Corporation,A,High,533,2259,NYSE,BB,Medium,305,20230222,BB,Medium,371,DUK,1209,A,High
+US2333311072,USD,System.Object[],DTE Energy Company,A,High,513,2253,NYSE,B,Medium,205,20230222,BB,Medium,348,DTE,1066,BBB,High
+US2600031080,USD,System.Object[],Dover Corporation,A,High,500,2236,NYSE,BB,Medium,315,20230222,BB,Medium,335,DOV,1150,BBB,High
+US23918K1088,USD,System.Object[],DaVita Inc.,BB,Medium,313,2100,NYSE,BB,Medium,305,20230222,BB,Medium,327,DVA,945,BBB,High
+US3647601083,USD,System.Object[],"The Gap, Inc.",A,High,525,2998,NYSE,BB,Medium,305,20230222,BB,Medium,304,GPS,1134,BBB,High
+CH0114405324,USD,System.Object[],Garmin Ltd.,B,Medium,205,3001,NASDAQ,B,Medium,205,20230222,B,Medium,200,GRMN,610,B,Medium
+US3666511072,USD,System.Object[],"Gartner, Inc.",A,High,560,3003,NYSE,BB,Medium,340,20230222,BB,Medium,324,IT,1224,A,High
+US35671D8570,USD,System.Object[],Freeport-McMoRan Inc.,BBB,High,438,2912,NYSE,BB,Medium,300,20230222,BB,Medium,335,FCX,1073,BBB,High
+US3546131018,USD,System.Object[],"Franklin Resources, Inc.",BB,Medium,331,2902,NYSE,BB,Medium,305,20230222,BB,Medium,399,BEN,1035,BBB,High
+US35137L2043,USD,System.Object[],Fox Marble Holdings PLC,CC,Low,125,9828,LON,B,Medium,295,20230223,B,Medium,278,FOX,698,B,Medium
+US34959J1088,USD,System.Object[],Fortive Corporation,AA,Excellent,618,2872,NYSE,BB,Medium,310,20230222,BB,Medium,321,FTV,1249,A,High
+US34959E1091,USD,System.Object[],"Fortinet, Inc.",A,High,558,2870,NASDAQ,BB,Medium,345,20230222,BB,Medium,314,FTNT,1217,A,High
+US3453708600,USD,System.Object[],Ford Motor Company,B,Medium,272,2858,NYSE,B,Medium,205,20230222,B,Medium,271,F,748,B,Medium
+US3024913036,USD,System.Object[],FMC Corporation,A,High,500,2846,NYSE,BB,Medium,303,20230222,BB,Medium,305,FMC,1108,BBB,High
+US3390411052,USD,System.Object[],"FLEETCOR Technologies, Inc.",AA,Excellent,620,2823,NYSE,BB,Medium,350,20230222,BB,Medium,339,FLT,1309,A,High
+US3377381088,USD,System.Object[],"Fiserv, Inc.",A,High,545,2808,NASDAQ,BB,Medium,340,20230222,BB,Medium,301,FISV,1186,BBB,High
+US3379321074,USD,System.Object[],FirstEnergy Corp.,BBB,High,440,2803,NYSE,BB,Medium,308,20230222,BB,Medium,341,FE,1089,BBB,High
+US3167731005,USD,System.Object[],Fifth Third Bancorp,BB,Medium,345,2727,NASDAQ,B,Medium,230,20230222,BB,Medium,301,FITB,876,BB,Medium
+US31620M1062,USD,System.Object[],"Fidelity National Information Services, Inc.",A,High,550,2723,NYSE,BB,Medium,340,20230222,BB,Medium,301,FIS,1191,BBB,High
+US31428X1063,USD,System.Object[],FedEx Corporation,BBB,High,412,2706,NYSE,B,Medium,275,20230222,BB,Medium,320,FDX,1007,BBB,High
+US3119001044,USD,System.Object[],Fastenal Company,BB,Medium,310,2692,NASDAQ,B,Medium,220,20230222,BB,Medium,322,FAST,852,BB,Medium
+US3156161024,USD,System.Object[],"F5 Networks, Inc.",B,Medium,255,2662,NASDAQ,B,Medium,255,20230222,B,Medium,219,FFIV,729,B,Medium
+US30231G1022,USD,System.Object[],Exxon Mobil Corporation,BBB,High,415,2655,NYSE,BB,Medium,300,20230222,BB,Medium,303,XOM,1018,BBB,High
+US30225T1025,USD,System.Object[],Extra Space Storage Inc.,A,High,518,2652,NYSE,B,Medium,225,20230222,B,Medium,252,EXR,995,BBB,High
+US3021301094,USD,System.Object[],"Expeditors International of Washington, Inc.",A,High,515,2645,NASDAQ,BB,Medium,300,20230222,BB,Medium,304,EXPD,1119,BBB,High
+US30212P3038,USD,System.Object[],"Expedia Group, Inc.",B,Medium,286,2644,NASDAQ,BB,Medium,318,20230222,BB,Medium,334,EXPE,938,BBB,High
+US30161N1019,USD,System.Object[],Exelon Corporation,BBB,High,458,2637,NASDAQ,BB,Medium,308,20230222,BB,Medium,362,EXC,1128,BBB,High
+US30040W1080,USD,System.Object[],Eversource Energy,A,High,508,2609,NYSE,BB,Medium,313,20230222,BB,Medium,376,ES,1197,BBB,High
+US30034W1062,USD,System.Object[],"Evergy, Inc.",BBB,High,412,71949,NYSE,BB,Medium,300,20230301,BB,Medium,313,EVRG,1025,BBB,High
+BMG3223R1088,USD,System.Object[],"Everest Re Group, Ltd.",A,High,510,2604,NYSE,BB,Medium,305,20230222,BB,Medium,302,RE,1117,BBB,High
+US29786A1060,USD,System.Object[],"Etsy, Inc.",BBB,High,473,2584,NASDAQ,B,Medium,220,20230222,B,Medium,221,ETSY,914,BBB,High
+US5184391044,USD,System.Object[],EssilorLuxottica Société anonyme,A,High,500,2578,XPAR,BB,Medium,300,20230222,BB,Medium,300,EL,1100,BBB,High
+US2971781057,USD,System.Object[],"Essex Property Trust, Inc.",BBB,High,402,2577,NYSE,B,Medium,230,20230222,B,Medium,292,ESS,924,BBB,High
+US29476L1070,USD,System.Object[],Equity Residential,B,Medium,235,2555,NYSE,B,Medium,210,20230222,B,Medium,230,EQR,675,B,Medium
+US29444U7000,USD,System.Object[],"Equinix, Inc. (REIT)",A,High,552,2547,NASDAQ,BB,Medium,310,20230222,BB,Medium,382,EQIX,1244,A,High
+US2944291051,USD,System.Object[],Equifax Inc.,A,High,505,71923,NYSE,BB,Medium,310,20230301,BB,Medium,301,EFX,1116,BBB,High
+US3687361044,USD,System.Object[],Generac Holdings Inc.,A,High,520,3030,NYSE,B,Medium,260,20230222,BB,Medium,333,GNRC,1113,BBB,High
+US4461501045,USD,System.Object[],Huntington Bancshares Incorporated,BBB,High,425,3604,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,HBAN,1025,BBB,High
+US4448591028,USD,System.Object[],Humana Inc.,BBB,High,462,3600,NYSE,BB,Medium,300,20230222,BB,Medium,300,HUM,1062,BBB,High
+US40434L1052,USD,System.Object[],HP Inc.,B,Medium,245,3578,NYSE,B,Medium,200,20230222,B,Medium,211,HPQ,656,B,Medium
+US4432011082,USD,System.Object[],Howmet Aerospace Inc.,A,High,545,72010,NYSE,BB,Medium,305,20230301,BB,Medium,313,HWM,1163,BBB,High
+US44107P1049,USD,System.Object[],"Host Hotels & Resorts, Inc.",A,High,551,3567,NASDAQ,BB,Medium,305,20230222,BB,Medium,348,HST,1204,A,High
+US4404521001,USD,System.Object[],Hormel Foods Corporation,A,High,545,3566,NYSE,BB,Medium,313,20230222,BB,Medium,303,HRL,1161,BBB,High
+US4385161066,USD,System.Object[],Honeywell International Inc.,A,High,593,3548,NYSE,BB,Medium,320,20230222,BB,Medium,328,HON,1241,A,High
+US4370761029,USD,System.Object[],"The Home Depot, Inc.",B,Medium,254,3539,NYSE,B,Medium,205,20230222,B,Medium,248,HD,707,B,Medium
+US4364401012,USD,System.Object[],"Hologic, Inc.",A,High,515,3533,NASDAQ,BB,Medium,316,20230222,BB,Medium,307,HOLX,1138,BBB,High
+US43300A2033,USD,System.Object[],Hilton Worldwide Holdings Inc.,BB,Medium,308,3509,NYSE,B,Medium,208,20230222,B,Medium,238,HLT,754,BB,Medium
+US42824C1099,USD,System.Object[],Hewlett Packard Enterprise Company,B,Medium,285,3485,NYSE,B,Medium,260,20230222,BB,Medium,324,HPE,869,BB,Medium
+US42809H1077,USD,System.Object[],Hess Corporation,BBB,High,455,3484,NYSE,BB,Medium,300,20230222,BB,Medium,322,HES,1077,BBB,High
+US8064071025,USD,System.Object[],"Henry Schein, Inc.",B,Medium,259,3464,NASDAQ,B,Medium,205,20230222,B,Medium,238,HSIC,702,B,Medium
+US42250P1030,USD,System.Object[],"Healthpeak Properties, Inc.",A,High,535,72140,NYSE,BB,Medium,335,20230301,BB,Medium,331,PEAK,1201,A,High
+US40412C1018,USD,System.Object[],"HCA Healthcare, Inc.",A,High,510,3415,NYSE,BB,Medium,315,20230222,BB,Medium,372,HCA,1197,BBB,High
+US4180561072,USD,System.Object[],"Hasbro, Inc.",B,Medium,255,3405,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,HAS,855,BB,Medium
+US4165151048,USD,System.Object[],"The Hartford Financial Services Group, Inc.",A,High,505,3400,NYSE,BB,Medium,308,20230222,BB,Medium,305,HIG,1118,BBB,High
+US4103451021,USD,System.Object[],Hanesbrands Inc.,BB,Medium,318,3378,NYSE,BB,Medium,300,20230222,B,Medium,202,HBI,820,BB,Medium
+US4062161017,USD,System.Object[],HAL Trust,B,Medium,220,3365,XAMS,B,Medium,205,20230222,B,Medium,200,HAL,625,B,Medium
+US38141G1040,USD,System.Object[],"The Goldman Sachs Group, Inc.",A,High,540,3191,NYSE,BB,Medium,300,20230222,BB,Medium,303,GS,1143,BBB,High
+US37940X1028,USD,System.Object[],Global Payments Inc.,BB,Medium,335,3129,NYSE,B,Medium,280,20230222,BB,Medium,304,GPN,919,BBB,High
+US3755581036,USD,System.Object[],"Gilead Sciences, Inc.",A,High,515,3092,NASDAQ,BB,Medium,320,20230222,BB,Medium,322,GILD,1157,BBB,High
+US3724601055,USD,System.Object[],Genuine Parts Company,A,High,568,3064,NYSE,BB,Medium,310,20230222,B,Medium,278,GPC,1156,BBB,High
+US37045V1008,USD,System.Object[],General Motors Company,A,High,523,3037,NYSE,B,Medium,215,20230222,BB,Medium,362,GM,1100,BBB,High
+US3703341046,USD,System.Object[],"General Mills, Inc.",A,High,530,3036,NYSE,BB,Medium,305,20230222,BB,Medium,306,GIS,1141,BBB,High
+US3696041033,USD,System.Object[],"Great Elm Capital Group, Inc.",B,Medium,200,3237,NASDAQ,B,Medium,200,20230222,B,Medium,200,GEC,600,B,Medium
+US3695501086,USD,System.Object[],General Dynamics Corporation,A,High,510,73983,NYSE,BB,Medium,300,20230301,BB,Medium,300,GD,1110,BBB,High
+US48203R1041,USD,System.Object[],"Juniper Networks, Inc.",B,Medium,255,4023,NYSE,B,Medium,220,20230222,BB,Medium,310,JNPR,785,BB,Medium
+US4878361082,USD,System.Object[],Kellogg Company,A,High,515,4066,NYSE,BB,Medium,310,20230222,BB,Medium,318,K,1143,BBB,High
+US4932671088,USD,System.Object[],KeyCorp,A,High,568,4092,NYSE,BB,Medium,325,20230222,BB,Medium,303,KEY,1196,BBB,High
+US46625H1005,USD,System.Object[],JPMorgan Chase & Co.,A,High,562,4012,NYSE,BB,Medium,310,20230222,BB,Medium,302,JPM,1174,BBB,High
+IE00BY7QL619,USD,System.Object[],Johnson Controls International plc,A,High,500,4003,NYSE,BB,Medium,300,20230222,BB,Medium,300,JCI,1100,BBB,High
+US4781601046,USD,System.Object[],Johnson & Johnson,A,High,525,4002,NYSE,BB,Medium,300,20230222,BB,Medium,328,JNJ,1153,BBB,High
+US4262811015,USD,System.Object[],"Jack Henry & Associates, Inc.",A,High,560,3957,NASDAQ,BB,Medium,350,20230222,BB,Medium,306,JKHY,1216,A,High
+US8326964058,USD,System.Object[],The J. M. Smucker Company,A,High,540,3952,NYSE,BB,Medium,320,20230222,BB,Medium,304,SJM,1164,BBB,High
+US4456581077,USD,System.Object[],"J.B. Hunt Transport Services, Inc.",A,High,580,3950,NASDAQ,BB,Medium,315,20230222,BB,Medium,309,JBHT,1204,A,High
+US46284V1017,USD,System.Object[],Iron Mountain Incorporated,A,High,500,3911,NYSE,BB,Medium,300,20230222,BB,Medium,300,IRM,1100,BBB,High
+US46266C1053,USD,System.Object[],IQVIA Holdings Inc.,A,High,505,72032,NYSE,BB,Medium,305,20230301,BB,Medium,304,IQV,1114,BBB,High
+US44980X1090,USD,System.Object[],IPG Photonics Corporation,A,High,522,3905,NASDAQ,B,Medium,250,20230222,BB,Medium,333,IPGP,1105,BBB,High
+US46187W1071,USD,System.Object[],Invitation Homes Inc.,A,High,550,72028,NYSE,BB,Medium,300,20230301,BB,Medium,347,INVH,1197,BBB,High
+BMG491BT1088,USD,System.Object[],Invictus Energy Limited,B,Medium,293,8658,ASX,BB,Medium,300,20230223,B,Medium,235,IVZ,828,BB,Medium
+US46120E6023,USD,System.Object[],"Intuitive Surgical, Inc.",A,High,525,3865,NASDAQ,B,Medium,291,20230222,BB,Medium,336,ISRG,1152,BBB,High
+US4612021034,USD,System.Object[],Intuit Inc.,A,High,560,3864,NASDAQ,BB,Medium,345,20230222,BB,Medium,344,INTU,1249,A,High
+US4606901001,USD,System.Object[],"The Interpublic Group of Companies, Inc.",A,High,500,3845,NYSE,BB,Medium,300,20230222,BB,Medium,300,IPG,1100,BBB,High
+US4601461035,USD,System.Object[],International Paper Company,A,High,528,3836,NYSE,BB,Medium,305,20230222,BB,Medium,316,IP,1149,BBB,High
+GB00BVG7F061,USD,System.Object[],International Game Technology PLC,A,High,525,3832,NYSE,BB,Medium,352,20230222,BB,Medium,323,IGT,1200,A,High
+US4595061015,USD,System.Object[],International Flavors & Fragrances Inc.,A,High,510,3830,NYSE,BB,Medium,305,20230222,BB,Medium,339,IFF,1154,BBB,High
+US45866F1049,USD,System.Object[],"Intercontinental Exchange, Inc.",A,High,500,3815,NYSE,BB,Medium,300,20230222,BB,Medium,344,ICE,1144,BBB,High
+US4581401001,USD,System.Object[],Intel Corporation,BB,Medium,395,3799,,A,High,565,20230222,BBB,High,426,INTC,1386,A,High
+US45784P1012,USD,System.Object[],Insulet Corporation,A,High,510,3787,NASDAQ,B,Medium,250,20230222,BB,Medium,359,PODD,1119,BBB,High
+US45337C1027,USD,System.Object[],Incyte Corporation,A,High,520,3716,NASDAQ,BB,Medium,300,20230222,BB,Medium,302,INCY,1122,BBB,High
+US4523271090,USD,System.Object[],"Illumina, Inc.",A,High,520,3678,NASDAQ,BB,Medium,300,20230222,BB,Medium,322,ILMN,1142,BBB,High
+US4523081093,USD,System.Object[],Illinois Tool Works Inc.,A,High,510,3677,NYSE,BB,Medium,305,20230222,BB,Medium,331,ITW,1146,BBB,High
+US45168D1046,USD,System.Object[],"IDEXX Laboratories, Inc.",A,High,570,3655,NASDAQ,BB,Medium,305,20230222,BB,Medium,387,IDXX,1262,A,High
+US45167R1041,USD,System.Object[],IDEX Corporation,A,High,500,3654,NYSE,B,Medium,265,20230222,BB,Medium,300,IEX,1065,BBB,High
+US4464131063,USD,System.Object[],"Huntington Ingalls Industries, Inc.",A,High,525,3605,NYSE,BB,Medium,305,20230222,BB,Medium,315,HII,1145,BBB,High
+US49338L1035,USD,System.Object[],"Keysight Technologies, Inc.",A,High,555,4095,NYSE,BB,Medium,315,20230222,BB,Medium,351,KEYS,1221,A,High
+US4943681035,USD,System.Object[],Kimberly-Clark Corporation,A,High,540,4106,NYSE,BB,Medium,310,20230222,BB,Medium,303,KMB,1153,BBB,High
+US49446R1095,USD,System.Object[],Kimco Realty Corporation,A,High,545,4108,NYSE,BB,Medium,305,20230222,BB,Medium,325,KIM,1175,BBB,High
+US49456B1017,USD,System.Object[],"Kinder Morgan, Inc.",A,High,576,4112,NYSE,BB,Medium,315,20230222,BB,Medium,313,KMI,1204,A,High
+US4824801009,USD,System.Object[],KLA Corporation,A,High,500,4137,NASDAQ,BB,Medium,318,20230222,BB,Medium,306,KLAC,1124,BBB,High
+US5010441013,USD,System.Object[],The Kroger Co.,A,High,540,4178,NYSE,BB,Medium,315,20230222,BB,Medium,328,KR,1183,BBB,High
+US5024311095,USD,System.Object[],"L3Harris Technologies, Inc.",A,High,510,72065,NYSE,B,Medium,285,20230301,BB,Medium,302,LHX,1097,BBB,High
+US50540R4092,USD,System.Object[],Laboratory Corporation of America Holdings,A,High,500,4203,NYSE,BB,Medium,300,20230222,BB,Medium,300,LH,1100,BBB,High
+US5128071082,USD,System.Object[],Lam Research Corporation,A,High,510,4214,NASDAQ,BB,Medium,305,20230222,BB,Medium,316,LRCX,1131,BBB,High
+US5132721045,USD,System.Object[],"Lamb Weston Holdings, Inc.",A,High,510,72072,NYSE,BB,Medium,300,20230301,B,Medium,242,LW,1052,BBB,High
+US5178341070,USD,System.Object[],Las Vegas Sands Corp.,A,High,510,4237,NYSE,BB,Medium,329,20230222,BB,Medium,330,LVS,1169,BBB,High
+US5246601075,USD,System.Object[],"Leggett & Platt, Incorporated",A,High,500,4262,NYSE,BB,Medium,300,20230222,BB,Medium,300,LEG,1100,BBB,High
+US5253271028,USD,System.Object[],"Leidos Holdings, Inc.",A,High,545,4264,NYSE,BB,Medium,348,20230222,BB,Medium,308,LDOS,1201,A,High
+US5260571048,USD,System.Object[],Lennar Corporation,B,Medium,288,4270,NYSE,B,Medium,220,20230222,BB,Medium,301,LEN,809,BB,Medium
+US5341871094,USD,System.Object[],Lincoln National Corporation,A,High,525,4324,NYSE,BB,Medium,305,20230222,BB,Medium,307,LNC,1137,BBB,High
+IE000S9YS762,USD,System.Object[],Lindian Resources Limited,CC,Low,133,8742,ASX,B,Medium,285,20230223,B,Medium,259,LIN,677,B,Medium
+US5380341090,USD,System.Object[],"Live Nation Entertainment, Inc.",BBB,High,487,4350,NYSE,B,Medium,283,20230222,BB,Medium,302,LYV,1072,BBB,High
+US5018892084,USD,System.Object[],LKQ Corporation,A,High,545,4360,NASDAQ,BB,Medium,310,20230222,BB,Medium,313,LKQ,1168,BBB,High
+US5398301094,USD,System.Object[],Lockheed Martin Corporation,A,High,500,4368,NYSE,BB,Medium,361,20230222,BB,Medium,301,LMT,1162,BBB,High
+US5404241086,USD,System.Object[],Loews Corporation,A,High,500,4369,NYSE,BB,Medium,305,20230222,BB,Medium,305,L,1110,BBB,High
+US5486611073,USD,System.Object[],"Lowes Companies, Inc.",B,Medium,233,4383,NYSE,B,Medium,200,20230222,B,Medium,200,LOW,633,B,Medium
+US5502411037,USD,System.Object[],"Lumen Technologies, Inc.",A,High,500,72071,NYSE,BB,Medium,300,20230301,BB,Medium,306,LUMN,1106,BBB,High
+NL0009434992,USD,System.Object[],LyondellBasell Industries N.V.,A,High,547,4412,NYSE,BB,Medium,300,20230222,BB,Medium,308,LYB,1155,BBB,High
+US55261F1049,USD,System.Object[],M&T Bank Corporation,A,High,520,4418,NYSE,B,Medium,265,20230222,BB,Medium,300,MTB,1085,BBB,High
+US56585A1025,USD,System.Object[],Marathon Petroleum Corporation,BBB,High,474,4504,NYSE,BB,Medium,310,20230222,BB,Medium,329,MPC,1113,BBB,High
+US57060D1081,USD,System.Object[],MarketAxess Holdings Inc.,B,Medium,240,4520,NASDAQ,B,Medium,205,20230222,B,Medium,210,MKTX,655,B,Medium
+US5719032022,USD,System.Object[],"Marriott International, Inc.",B,Medium,290,4527,NASDAQ,B,Medium,210,20230222,B,Medium,251,MAR,751,BB,Medium
+US5717481023,USD,System.Object[],"Marsh & McLennan Companies, Inc.",A,High,500,4530,NYSE,BB,Medium,300,20230222,BB,Medium,300,MMC,1100,BBB,High
+US5732841060,USD,System.Object[],"Martin Marietta Materials, Inc.",BBB,High,498,4533,NYSE,BB,Medium,305,20230222,BB,Medium,301,MLM,1104,BBB,High
+US5745991068,USD,System.Object[],Masco Corporation,A,High,510,4538,NYSE,BB,Medium,300,20230222,BB,Medium,301,MAS,1111,BBB,High
+US57636Q1040,USD,System.Object[],Mastercard Incorporated,B,Medium,210,4548,NYSE,B,Medium,215,20230222,B,Medium,230,MA,655,B,Medium
+US5797802064,USD,System.Object[],"McCormick & Company, Incorporated",A,High,500,4577,NYSE,BB,Medium,300,20230222,BB,Medium,300,MKC,1100,BBB,High
+US5801351017,USD,System.Object[],McDonalds Corporation,A,High,505,4579,NYSE,BB,Medium,300,20230222,BB,Medium,300,MCD,1105,BBB,High
+US58155Q1031,USD,System.Object[],McKesson Corporation,A,High,520,4582,NYSE,BB,Medium,300,20230222,BB,Medium,302,MCK,1122,BBB,High
+IE00BTN1Y115,USD,System.Object[],Medtronic plc,A,High,530,4629,NYSE,BB,Medium,315,20230222,BB,Medium,301,MDT,1146,BBB,High
+US58933Y1055,USD,System.Object[],"Merck & Co., Inc.",A,High,525,4651,XPAR,BB,Medium,316,20230222,BB,Medium,302,MRK,1143,BBB,High
+US59156R1086,USD,System.Object[],"MetLife, Inc.",A,High,510,4683,NYSE,BB,Medium,305,20230222,BB,Medium,335,MET,1150,BBB,High
+US5926881054,USD,System.Object[],Mettler-Toledo International Inc.,A,High,510,4687,NYSE,B,Medium,240,20230222,BB,Medium,321,MTD,1071,BBB,High
+US5529531015,USD,System.Object[],MGM Resorts International,A,High,503,4706,NYSE,BB,Medium,308,20230222,BB,Medium,317,MGM,1128,BBB,High
+US5950171042,USD,System.Object[],Microchip Technology Incorporated,A,High,500,4714,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,MCHP,1100,BBB,High
+US5951121038,USD,System.Object[],"Micron Technology, Inc.",A,High,535,4716,NASDAQ,BB,Medium,320,20230222,BB,Medium,320,MU,1175,BBB,High
+US5949181045,USD,System.Object[],Microsoft Corporation,AA,Excellent,805,4720,NASDAQ,BB,Medium,390,20230222,A,High,504,MSFT,1699,A,High
+US59522J1034,USD,System.Object[],"Mid-America Apartment Communities, Inc.",BBB,High,425,4725,NYSE,BB,Medium,300,20230222,BB,Medium,300,MAA,1025,BBB,High
+US60770K1079,USD,System.Object[],"Moderna, Inc.",A,High,500,4512,NASDAQ,BB,Medium,305,20230222,BB,Medium,305,MRNA,1110,BBB,High
+US6081901042,USD,System.Object[],"Mohawk Industries, Inc.",AA,Excellent,605,4800,NYSE,BB,Medium,303,20230222,BB,Medium,326,MHK,1234,A,High
+US60855R1005,USD,System.Object[],"Molina Healthcare, Inc.",B,Medium,220,4804,NYSE,B,Medium,213,20230222,BB,Medium,308,MOH,741,B,Medium
+US6092071058,USD,System.Object[],"Mondelez International, Inc.",A,High,505,4816,NASDAQ,BB,Medium,315,20230222,BB,Medium,307,MDLZ,1127,BBB,High
+US6098391054,USD,System.Object[],"Monolithic Power Systems, Inc.",BB,Medium,320,4826,NASDAQ,B,Medium,260,20230222,B,Medium,233,MPWR,813,BB,Medium
+US61174X1090,USD,System.Object[],Monster Beverage Corporation,A,High,550,4830,NASDAQ,BB,Medium,318,20230222,BB,Medium,311,MNST,1179,BBB,High
+US6153691059,USD,System.Object[],Moodys Corporation,A,High,565,4833,NYSE,B,Medium,235,20230222,BB,Medium,322,MCO,1122,BBB,High
+US6174464486,USD,System.Object[],Morgan Stanley,A,High,515,4837,NYSE,BB,Medium,300,20230222,BB,Medium,300,MS,1115,BBB,High
+US61945C1036,USD,System.Object[],The Mosaic Company,A,High,505,4842,NYSE,BB,Medium,305,20230222,BB,Medium,381,MOS,1191,BBB,High
+US6200763075,USD,System.Object[],"Motorola Solutions, Inc.",A,High,575,4847,NYSE,BB,Medium,320,20230222,BB,Medium,363,MSI,1258,A,High
+US55354G1004,USD,System.Object[],MSCI Inc.,A,High,579,4863,NYSE,BB,Medium,315,20230222,BB,Medium,333,MSCI,1227,A,High
+US6311031081,USD,System.Object[],"Nasdaq, Inc.",A,High,505,4929,NASDAQ,BB,Medium,300,20230222,BB,Medium,301,NDAQ,1106,BBB,High
+US64110D1046,USD,System.Object[],"NetApp, Inc.",A,High,585,5006,NASDAQ,BB,Medium,320,20230222,BB,Medium,362,NTAP,1267,A,High
+US6512291062,USD,System.Object[],Newell Brands Inc.,A,High,528,5061,NASDAQ,BB,Medium,300,20230222,BB,Medium,304,NWL,1132,BBB,High
+US6516391066,USD,System.Object[],Newmont Corporation,BBB,High,430,5063,NYSE,BB,Medium,315,20230222,BB,Medium,301,NEM,1046,BBB,High
+US65249B1098,USD,System.Object[],News Corporation,A,High,520,5067,NASDAQ,BB,Medium,305,20230222,BB,Medium,364,NWSA,1189,BBB,High
+US6541061031,USD,System.Object[],"NIKE, Inc.",B,Medium,220,5096,NYSE,B,Medium,200,20230222,BB,Medium,307,NKE,727,B,Medium
+US65473P1057,USD,System.Object[],NiSource Inc.,B,Medium,283,5108,NYSE,B,Medium,245,20230222,B,Medium,277,NI,805,BB,Medium
+US65339F1012,USD,System.Object[],"NextEra Energy, Inc.",BBB,High,482,5077,NYSE,BB,Medium,300,20230222,BB,Medium,369,NEE,1151,BBB,High
+US6558441084,USD,System.Object[],Norfolk Southern Corporation,AA,Excellent,621,5138,NYSE,BB,Medium,318,20230222,BB,Medium,314,NSC,1253,A,High
+US6658591044,USD,System.Object[],Northern Trust Corporation,BBB,High,485,5167,NASDAQ,BB,Medium,310,20230222,BB,Medium,350,NTRS,1145,BBB,High
+US6668071029,USD,System.Object[],Northrop Grumman Corporation,A,High,505,5174,NYSE,BB,Medium,305,20230222,BB,Medium,310,NOC,1120,BBB,High
+BMG667211046,USD,System.Object[],Norwegian Cruise Line Holdings Ltd.,A,High,505,5188,NYSE,BB,Medium,300,20230222,BB,Medium,305,NCLH,1110,BBB,High
+US6293775085,USD,System.Object[],"NRG Energy, Inc.",B,Medium,283,5212,NYSE,B,Medium,200,20230222,B,Medium,249,NRG,732,B,Medium
+US6703461052,USD,System.Object[],Nucor Corporation,BBB,High,482,5219,NYSE,BB,Medium,310,20230222,BB,Medium,347,NUE,1139,BBB,High
+US67066G1040,USD,System.Object[],NVIDIA Corporation,BBB,High,408,5244,NASDAQ,B,Medium,290,20230222,BB,Medium,307,NVDA,1005,BBB,High
+US62944T1051,USD,System.Object[],"NVR, Inc.",B,Medium,240,5246,NYSE,B,Medium,205,20230222,B,Medium,203,NVR,648,B,Medium
+NL0009538784,USD,System.Object[],NXP Semiconductors N.V.,A,High,505,5247,NASDAQ,BB,Medium,305,20230222,BB,Medium,303,NXPI,1113,BBB,High
+US6745991058,USD,System.Object[],Occidental Petroleum Corporation,A,High,541,5261,NYSE,BB,Medium,313,20230222,BB,Medium,320,OXY,1174,BBB,High
+US6795801009,USD,System.Object[],"Old Dominion Freight Line, Inc.",BB,Medium,375,5286,NASDAQ,B,Medium,285,20230222,BB,Medium,320,ODFL,980,BBB,High
+US6819191064,USD,System.Object[],Omnicom Group Inc.,A,High,545,5301,NYSE,BB,Medium,329,20230222,BB,Medium,302,OMC,1176,BBB,High
+US6826801036,USD,System.Object[],"ONEOK, Inc.",BBB,High,467,5320,NYSE,BB,Medium,310,20230222,BB,Medium,311,OKE,1088,BBB,High
+US68389X1054,USD,System.Object[],Oracle Corporation,A,High,545,5341,NYSE,BB,Medium,345,20230222,BB,Medium,320,ORCL,1210,A,High
+US67103H1077,USD,System.Object[],"OReilly Automotive, Inc.",A,High,500,5356,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,ORLY,1100,BBB,High
+US68622V1061,USD,System.Object[],Organon & Co.,A,High,505,74019,NYSE,BB,Medium,300,20230301,BB,Medium,337,OGN,1142,BBB,High
+US6937181088,USD,System.Object[],PACCAR Inc,A,High,525,5417,NASDAQ,BB,Medium,300,20230222,BB,Medium,316,PCAR,1141,BBB,High
+US6951561090,USD,System.Object[],Packaging Corporation of America,A,High,500,5435,NYSE,BB,Medium,300,20230222,BB,Medium,303,PKG,1103,BBB,High
+US7010941042,USD,System.Object[],Parker-Hannifin Corporation,BBB,High,451,5477,NYSE,B,Medium,245,20230222,BB,Medium,341,PH,1037,BBB,High
+US7043261079,USD,System.Object[],"Paychex, Inc.",A,High,590,5507,NASDAQ,BB,Medium,325,20230222,BB,Medium,371,PAYX,1286,A,High
+US70432V1026,USD,System.Object[],"Paycom Software, Inc.",A,High,568,5508,NYSE,BB,Medium,340,20230222,BB,Medium,321,PAYC,1229,A,High
+US70450Y1038,USD,System.Object[],"PayPal Holdings, Inc.",BB,Medium,375,5510,NASDAQ,B,Medium,285,20230222,B,Medium,229,PYPL,889,BB,Medium
+IE00BLS09M33,USD,System.Object[],Pentair plc,BBB,High,431,5552,NYSE,BB,Medium,305,20230222,BB,Medium,320,PNR,1056,BBB,High
+US7134481081,USD,System.Object[],"PepsiCo, Inc.",AA,Excellent,703,5562,NASDAQ,BB,Medium,305,20230222,BB,Medium,300,PEP,1308,A,High
+US7140461093,USD,System.Object[],"PerkinElmer, Inc.",AA,Excellent,605,5568,NYSE,BB,Medium,303,20230222,BB,Medium,313,PKI,1221,A,High
+IE00BGH1M568,USD,System.Object[],Perrigo Company plc,A,High,505,5578,NYSE,BB,Medium,305,20230222,BB,Medium,321,PRGO,1131,BBB,High
+US7170811035,USD,System.Object[],Pfizer Inc.,A,High,500,5604,NYSE,BB,Medium,300,20230222,BB,Medium,305,PFE,1105,BBB,High
+US7181721090,USD,System.Object[],Philip Morris International Inc.,A,High,533,5619,NYSE,BB,Medium,300,20230222,BB,Medium,342,PM,1175,BBB,High
+US7185461040,USD,System.Object[],Phillips 66,BBB,High,428,5620,NYSE,BB,Medium,300,20230222,BB,Medium,328,PSX,1056,BBB,High
+US7234841010,USD,System.Object[],Pinnacle West Capital Corporation,A,High,534,5651,NYSE,BB,Medium,300,20230222,BBB,High,481,PNW,1315,A,High
+US7237871071,USD,System.Object[],Pioneer Natural Resources Company,BBB,High,440,5654,NYSE,BB,Medium,305,20230222,BB,Medium,307,PXD,1052,BBB,High
+US73278L1052,USD,System.Object[],Pool Corporation,A,High,598,5704,NASDAQ,BB,Medium,300,20230222,BB,Medium,323,POOL,1221,A,High
+US6935061076,USD,System.Object[],"PPG Industries, Inc.",BB,Medium,313,5730,NYSE,B,Medium,230,20230222,B,Medium,239,PPG,782,BB,Medium
+US69351T1060,USD,System.Object[],PPL Corporation,BBB,High,415,5732,NYSE,BB,Medium,308,20230222,BB,Medium,305,PPL,1028,BBB,High
+US74251V1026,USD,System.Object[],"Principal Financial Group, Inc.",A,High,515,5777,NASDAQ,BB,Medium,310,20230222,BB,Medium,307,PFG,1132,BBB,High
+US7433151039,USD,System.Object[],The Progressive Corporation,BB,Medium,380,5795,NYSE,B,Medium,263,20230222,BBB,High,418,PGR,1061,BBB,High
+US74340W1036,USD,System.Object[],"Prologis, Inc.",A,High,555,5797,NYSE,BB,Medium,315,20230222,BB,Medium,301,PLD,1171,BBB,High
+US7443201022,USD,System.Object[],"Prudential Financial, Inc.",BB,Medium,316,5839,NYSE,BB,Medium,387,20230222,BB,Medium,325,PRU,1028,BBB,High
+US69370C1009,USD,System.Object[],PTC Inc.,A,High,560,5845,NASDAQ,BB,Medium,365,20230222,BB,Medium,313,PTC,1238,A,High
+US7445731067,USD,System.Object[],Public Service Enterprise Group Incorporated,BBB,High,400,5848,NYSE,B,Medium,205,20230222,BB,Medium,300,PEG,905,BBB,High
+US74460D1090,USD,System.Object[],Public Storage,B,Medium,210,5849,NYSE,B,Medium,200,20230222,B,Medium,202,PSA,612,B,Medium
+US7458671010,USD,System.Object[],"PulteGroup, Inc.",B,Medium,230,5859,NYSE,B,Medium,220,20230222,B,Medium,202,PHM,652,B,Medium
+US74736K1016,USD,System.Object[],"Qorvo, Inc.",A,High,540,5902,NASDAQ,BB,Medium,310,20230222,BB,Medium,308,QRVO,1158,BBB,High
+US7475251036,USD,System.Object[],QUALCOMM Incorporated,BBB,High,414,5909,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,QCOM,1014,BBB,High
+US74762E1029,USD,System.Object[],"Quanta Services, Inc.",A,High,545,5913,NYSE,BB,Medium,305,20230222,BB,Medium,365,PWR,1215,A,High
+US74834L1008,USD,System.Object[],Quest Diagnostics Incorporated,B,Medium,230,5919,NYSE,B,Medium,205,20230222,BB,Medium,300,DGX,735,B,Medium
+US7512121010,USD,System.Object[],Ralph Lauren Corporation,BBB,High,462,5956,NYSE,BB,Medium,300,20230222,B,Medium,279,RL,1041,BBB,High
+US7547301090,USD,System.Object[],"Raymond James Financial, Inc.",A,High,515,5976,NYSE,BB,Medium,300,20230222,BB,Medium,305,RJF,1120,BBB,High
+US75513E1010,USD,System.Object[],Raytheon Technologies Corporation,A,High,565,72184,NYSE,BB,Medium,320,20230301,BB,Medium,320,RTX,1205,A,High
+US7561091049,USD,System.Object[],Realty Income Corporation,A,High,500,5992,NYSE,BB,Medium,300,20230222,BB,Medium,300,O,1100,BBB,High
+US7588491032,USD,System.Object[],Regency Centers Corporation,A,High,575,6024,NASDAQ,BB,Medium,365,20230222,BB,Medium,372,REG,1312,A,High
+US75886F1075,USD,System.Object[],"Regeneron Pharmaceuticals, Inc.",A,High,535,6025,NASDAQ,BB,Medium,300,20230222,BB,Medium,307,REGN,1142,BBB,High
+US7591EP1005,USD,System.Object[],Eurazeo SE,A,High,500,2585,XPAR,BB,Medium,300,20230222,BB,Medium,302,RF,1102,BBB,High
+US7604161072,USD,System.Object[],"Republic First Bancorp, Inc.",B,Medium,205,6068,NASDAQ,B,Medium,220,20230222,BB,Medium,327,FRBK,752,BB,Medium
+US7607591002,USD,System.Object[],"Republic Services, Inc.",B,Medium,273,6069,NYSE,B,Medium,280,20230222,B,Medium,259,RSG,812,BB,Medium
+US7611521078,USD,System.Object[],ResMed Inc.,BB,Medium,335,6077,NYSE,BB,Medium,310,20230222,BB,Medium,304,RMD,949,BBB,High
+US7703231032,USD,System.Object[],Robert Half International Inc.,A,High,520,6143,NYSE,BB,Medium,318,20230222,BB,Medium,330,RHI,1168,BBB,High
+US7739031091,USD,System.Object[],"Rockwell Automation, Inc.",B,Medium,258,6154,NYSE,B,Medium,210,20230222,B,Medium,252,ROK,720,B,Medium
+US7757111049,USD,System.Object[],"Rollins, Inc.",A,High,500,6167,NYSE,BB,Medium,305,20230222,BB,Medium,300,ROL,1105,BBB,High
+US7766961061,USD,System.Object[],"Roper Technologies, Inc.",A,High,560,6170,NYSE,BB,Medium,330,20230222,BB,Medium,324,ROP,1214,A,High
+US7782961038,USD,System.Object[],"Ross Stores, Inc.",BB,Medium,380,6172,NASDAQ,BB,Medium,300,20230222,BB,Medium,302,ROST,982,BBB,High
+LR0008862868,USD,System.Object[],Royal Caribbean Group,A,High,515,6180,NYSE,BB,Medium,323,20230222,BB,Medium,301,RCL,1139,BBB,High
+US78409V1044,USD,System.Object[],S&P Global Inc.,A,High,550,72209,NYSE,BB,Medium,305,20230301,BB,Medium,301,SPGI,1156,BBB,High
+US79466L3024,USD,System.Object[],"salesforce.com, inc.",B,Medium,255,6241,NYSE,B,Medium,255,20230222,B,Medium,221,CRM,731,B,Medium
+US78410G1040,USD,System.Object[],SBA Communications Corporation,B,Medium,255,6292,NASDAQ,B,Medium,215,20230222,B,Medium,252,SBAC,722,B,Medium
+AN8068571086,USD,System.Object[],Schlumberger Limited,BBB,High,460,6302,XPAR,BB,Medium,323,20230222,BB,Medium,332,SLB,1115,BBB,High
+US81211K1007,USD,System.Object[],Sealed Air Corporation,AA,Excellent,610,6331,NYSE,BB,Medium,307,20230222,BB,Medium,333,SEE,1250,A,High
+US8168511090,USD,System.Object[],Sempra Energy,A,High,504,6362,NYSE,BB,Medium,305,20230222,BB,Medium,341,SRE,1150,BBB,High
+US81762P1021,USD,System.Object[],"ServiceNow, Inc.",A,High,563,6381,NYSE,BB,Medium,350,20230222,BB,Medium,338,NOW,1251,A,High
+US8243481061,USD,System.Object[],The Sherwin-Williams Company,BB,Medium,325,6411,NYSE,B,Medium,220,20230222,B,Medium,259,SHW,804,BB,Medium
+US8288061091,USD,System.Object[],"Simon Property Group, Inc.",B,Medium,238,6467,NYSE,B,Medium,205,20230222,B,Medium,238,SPG,681,B,Medium
+US83088M1027,USD,System.Object[],"Skyworks Solutions, Inc.",A,High,510,6516,NASDAQ,BB,Medium,300,20230222,BB,Medium,304,SWKS,1114,BBB,High
+US8330341012,USD,System.Object[],Snap-on Incorporated,A,High,500,6537,NYSE,B,Medium,261,20230222,BB,Medium,300,SNA,1061,BBB,High
+US8425871071,USD,System.Object[],The Southern Company,A,High,520,6600,NYSE,BB,Medium,305,20230222,BB,Medium,365,SO,1190,BBB,High
+US8447411088,USD,System.Object[],Southwest Airlines Co.,BB,Medium,380,6613,NYSE,B,Medium,208,20230222,BB,Medium,322,LUV,910,BBB,High
+US8545021011,USD,System.Object[],"Stanley Black & Decker, Inc.",A,High,533,6691,NYSE,BB,Medium,310,20230222,BB,Medium,311,SWK,1154,BBB,High
+US8552441094,USD,System.Object[],Starbucks Corporation,A,High,500,6701,NASDAQ,BB,Medium,300,20230222,BB,Medium,305,SBUX,1105,BBB,High
+US8574771031,USD,System.Object[],State Street Corporation,AA,Excellent,600,6708,NYSE,BB,Medium,330,20230222,BB,Medium,335,STT,1265,A,High
+US8636671013,USD,System.Object[],Stryker Corporation,BBB,High,475,6763,NYSE,BB,Medium,305,20230222,BB,Medium,305,SYK,1085,BBB,High
+US8636671013,USD,System.Object[],Stryker Corporation,BBB,High,475,6763,NYSE,BB,Medium,305,20230222,BB,Medium,305,SYK,1085,BBB,High
+US87165B1035,USD,System.Object[],Synchrony Financial,BBB,High,422,6862,NYSE,BB,Medium,310,20230222,BB,Medium,348,SYF,1080,BBB,High
+US8716071076,USD,System.Object[],"Synopsys, Inc.",A,High,565,6869,NASDAQ,BB,Medium,340,20230222,BB,Medium,310,SNPS,1215,A,High
+US8718291078,USD,System.Object[],Sysco Corporation,A,High,553,6875,NYSE,BB,Medium,320,20230222,BB,Medium,323,SYY,1196,BBB,High
+US8725901040,USD,System.Object[],"T-Mobile US, Inc.",BBB,High,471,7096,NASDAQ,B,Medium,240,20230223,BB,Medium,300,TMUS,1011,BBB,High
+US74144T1088,USD,System.Object[],"T. Rowe Price Group, Inc.",A,High,505,6879,NASDAQ,BB,Medium,310,20230222,BB,Medium,305,TROW,1120,BBB,High
+US8740541094,USD,System.Object[],"Take-Two Interactive Software, Inc.",B,Medium,225,6892,NASDAQ,BB,Medium,305,20230222,BB,Medium,300,TTWO,830,BB,Medium
+US8760301072,USD,System.Object[],"Tapestry, Inc.",A,High,510,72236,NYSE,BB,Medium,310,20230301,BB,Medium,360,TPR,1180,BBB,High
+US87612E1064,USD,System.Object[],Target Corporation,A,High,570,6909,NYSE,BB,Medium,310,20230222,BB,Medium,331,TGT,1211,A,High
+CH0102993182,USD,System.Object[],TE Connectivity Ltd.,B,Medium,200,6930,NYSE,B,Medium,200,20230222,B,Medium,200,TEL,600,B,Medium
+US8793601050,USD,System.Object[],Teledyne Technologies Incorporated,A,High,500,6957,NYSE,BB,Medium,300,20230222,BB,Medium,300,TDY,1100,BBB,High
+US8793691069,USD,System.Object[],Teleflex Incorporated,B,Medium,200,6958,NYSE,B,Medium,200,20230222,B,Medium,200,TFX,600,B,Medium
+US8807701029,USD,System.Object[],"Teradyne, Inc.",A,High,525,6994,NASDAQ,BB,Medium,318,20230222,BB,Medium,311,TER,1154,BBB,High
+US88160R1014,USD,System.Object[],"Tesla, Inc.",A,High,542,7009,NASDAQ,B,Medium,265,20230222,CCC,Low,188,TSLA,995,BBB,High
+US8825081040,USD,System.Object[],Texas Instruments Incorporated,A,High,500,7020,NASDAQ,BB,Medium,300,20230222,BB,Medium,300,TXN,1100,BBB,High
+US8832031012,USD,System.Object[],Textron Inc.,A,High,515,7028,NYSE,BB,Medium,305,20230222,BB,Medium,313,TXT,1133,BBB,High
+US00130H1059,USD,System.Object[],The AES Corporation,AA,Excellent,600,159,NYSE,BB,Medium,300,20230221,BB,Medium,351,AES,1251,A,High
+US4278661081,USD,System.Object[],The Hershey Company,A,High,500,3480,NYSE,BB,Medium,300,20230222,BB,Medium,301,HSY,1101,BBB,High
+US5007541064,USD,System.Object[],The Kraft Heinz Company,A,High,510,4173,NASDAQ,BB,Medium,305,20230222,BB,Medium,311,KHC,1126,BBB,High
+US89417E1091,USD,System.Object[],"The Travelers Companies, Inc.",A,High,500,7189,NYSE,BB,Medium,300,20230223,BB,Medium,300,TRV,1100,BBB,High
+US8835561023,USD,System.Object[],Thermo Fisher Scientific Inc.,A,High,543,7050,NYSE,B,Medium,290,20230223,BB,Medium,318,TMO,1151,BBB,High
+US8725401090,USD,System.Object[],"The TJX Companies, Inc.",A,High,500,7093,NYSE,BB,Medium,300,20230223,BB,Medium,300,TJX,1100,BBB,High
+US8923561067,USD,System.Object[],Tesco PLC,A,High,530,7008,FALSE,BB,Medium,300,20230222,BB,Medium,300,TSCO,1130,BBB,High
+IE00BK9ZQ967,USD,System.Object[],Trane Technologies plc,AA,Excellent,641,72240,NYSE,BB,Medium,345,20230301,BB,Medium,327,TT,1313,A,High
+US8936411003,USD,System.Object[],TransDigm Group Incorporated,A,High,500,7176,NYSE,BB,Medium,300,20230223,BB,Medium,300,TDG,1100,BBB,High
+US8962391004,USD,System.Object[],Trimble Inc.,A,High,500,7215,NASDAQ,BB,Medium,315,20230223,BB,Medium,301,TRMB,1116,BBB,High
+US89832Q1094,USD,System.Object[],Truist Financial Corporation,A,High,510,72228,NYSE,BB,Medium,323,20230301,BB,Medium,318,TFC,1151,BBB,High
+US9022521051,USD,System.Object[],"Tyler Technologies, Inc.",A,High,560,7291,NYSE,BB,Medium,360,20230223,BB,Medium,303,TYL,1223,A,High
+US9024941034,USD,System.Object[],"Tyson Foods, Inc.",A,High,525,7292,NYSE,B,Medium,280,20230223,BB,Medium,311,TSN,1116,BBB,High
+US9029733048,USD,System.Object[],U.S. Bancorp,BB,Medium,371,7295,NYSE,B,Medium,295,20230223,BB,Medium,311,USB,977,BBB,High
+US9026531049,USD,System.Object[],"UDR, Inc.",B,Medium,230,7316,NYSE,B,Medium,205,20230223,BB,Medium,304,UDR,739,B,Medium
+US90384S3031,USD,System.Object[],"Ulta Beauty, Inc.",B,Medium,225,7321,NASDAQ,B,Medium,210,20230223,B,Medium,227,ULTA,662,B,Medium
+US9043112062,USD,System.Object[],"Under Armour, Inc.",B,Medium,220,7336,NYSE,B,Medium,220,20230223,BB,Medium,300,UA,740,B,Medium
+US9078181081,USD,System.Object[],Union Pacific Corporation,B,Medium,293,7351,NYSE,B,Medium,234,20230223,B,Medium,223,UNP,750,BB,Medium
+US9100471096,USD,System.Object[],"United Airlines Holdings, Inc.",A,High,502,7366,NASDAQ,B,Medium,220,20230223,BB,Medium,322,UAL,1044,BBB,High
+US9113121068,USD,System.Object[],"United Parcel Service, Inc.",A,High,535,7376,NYSE,B,Medium,240,20230223,BB,Medium,327,UPS,1102,BBB,High
+US9113631090,USD,System.Object[],"United Rentals, Inc.",A,High,580,7377,NYSE,BB,Medium,300,20230223,BB,Medium,370,URI,1250,A,High
+US91324P1021,USD,System.Object[],UnitedHealth Group Incorporated,A,High,500,7386,NYSE,BB,Medium,300,20230223,BB,Medium,300,UNH,1100,BBB,High
+US9139031002,USD,System.Object[],"Universal Health Services, Inc.",A,High,535,7397,NYSE,BB,Medium,305,20230223,BB,Medium,317,UHS,1157,BBB,High
+US91529Y1064,USD,System.Object[],Unum Group,A,High,513,7409,NYSE,BB,Medium,313,20230223,BB,Medium,346,UNM,1172,BBB,High
+US9182041080,USD,System.Object[],V.F. Corporation,A,High,510,7523,NYSE,BB,Medium,320,20230223,BB,Medium,310,VFC,1140,BBB,High
+US91913Y1001,USD,System.Object[],Valero Energy Corporation,BBB,High,444,7453,NYSE,BB,Medium,305,20230223,BB,Medium,307,VLO,1056,BBB,High
+US92276F1003,USD,System.Object[],"Ventas, Inc.",A,High,515,7494,NYSE,BB,Medium,300,20230223,BB,Medium,300,VTR,1115,BBB,High
+US92343E1029,USD,System.Object[],"VeriSign, Inc.",A,High,549,7508,NASDAQ,BB,Medium,384,20230223,BB,Medium,307,VRSN,1240,A,High
+US92345Y1064,USD,System.Object[],"Verisk Analytics, Inc.",AA,Excellent,650,7509,NASDAQ,BB,Medium,355,20230223,BB,Medium,369,VRSK,1374,A,High
+US92532F1003,USD,System.Object[],Vertex Pharmaceuticals Incorporated,A,High,500,7518,NASDAQ,BB,Medium,300,20230223,BB,Medium,300,VRTX,1100,BBB,High
+US92556V1061,USD,System.Object[],Viatris Inc.,A,High,505,71714,NASDAQ,BB,Medium,310,20230301,BB,Medium,305,VTRS,1120,BBB,High
+US92826C8394,USD,System.Object[],Visa Inc.,A,High,510,7573,NYSE,BB,Medium,350,20230223,BB,Medium,352,V,1212,A,High
+US9290421091,USD,System.Object[],Vornado Realty Trust,A,High,550,7610,NYSE,BB,Medium,313,20230223,B,Medium,295,VNO,1158,BBB,High
+US9291601097,USD,System.Object[],Vulcan Materials Company,A,High,525,7622,NYSE,BB,Medium,300,20230223,BB,Medium,329,VMC,1154,BBB,High
+US3848021040,USD,System.Object[],"W.W. Grainger, Inc.",B,Medium,275,7631,NYSE,B,Medium,215,20230223,BBB,High,418,GWW,908,BBB,High
+US9311421039,USD,System.Object[],Walmart Inc.,B,Medium,280,7643,NYSE,B,Medium,230,20230223,B,Medium,286,WMT,796,BB,Medium
+US9314271084,USD,System.Object[],"Walgreens Boots Alliance, Inc.",A,High,510,7638,NASDAQ,BB,Medium,310,20230223,BB,Medium,340,WBA,1160,BBB,High
+US2546871060,USD,System.Object[],The Walt Disney Company,A,High,525,7644,NYSE,BB,Medium,310,20230223,BB,Medium,300,DIS,1135,BBB,High
+US94106L1098,USD,System.Object[],"Waste Management, Inc.",AA,Excellent,700,7652,NYSE,B,Medium,285,20230223,BB,Medium,327,WM,1312,A,High
+US9418481035,USD,System.Object[],Waters Corporation,BB,Medium,385,7655,NYSE,B,Medium,240,20230223,BB,Medium,314,WAT,939,BBB,High
+US92939U1060,USD,System.Object[],"WEC Energy Group, Inc.",A,High,596,7672,NYSE,BB,Medium,320,20230223,BBB,High,451,WEC,1367,A,High
+US9497461015,USD,System.Object[],Wells Fargo & Company,A,High,535,7685,NYSE,BB,Medium,320,20230223,BB,Medium,312,WFC,1167,BBB,High
+US95040Q1040,USD,System.Object[],WELL Health Technologies Corp.,A,High,583,11380,TSE,BB,Medium,310,20230223,BB,Medium,306,WELL,1199,BBB,High
+US9553061055,USD,System.Object[],"West Pharmaceutical Services, Inc.",A,High,565,7701,NYSE,BB,Medium,310,20230223,BB,Medium,335,WST,1210,A,High
+US9581021055,USD,System.Object[],Western Digital Corporation,A,High,500,7715,NASDAQ,B,Medium,250,20230223,BB,Medium,300,WDC,1050,BBB,High
+US9598021098,USD,System.Object[],The Western Union Company,B,Medium,205,7721,NYSE,B,Medium,223,20230223,B,Medium,212,WU,640,B,Medium
+US9297401088,USD,System.Object[],Wabtec Corporation,AA,Excellent,684,7633,NYSE,BB,Medium,320,20230223,BB,Medium,383,WAB,1387,A,High
+US96145D1054,USD,System.Object[],WestRock Company,A,High,500,7727,NYSE,BB,Medium,300,20230223,BB,Medium,300,WRK,1100,BBB,High
+US9621661043,USD,System.Object[],Weyerhaeuser Company,A,High,565,7732,NYSE,BB,Medium,315,20230223,BB,Medium,378,WY,1258,A,High
+US9633201069,USD,System.Object[],Whirlpool Corporation,A,High,555,7739,NYSE,BB,Medium,300,20230223,BB,Medium,321,WHR,1176,BBB,High
+US9694571004,USD,System.Object[],"The Williams Companies, Inc.",BBB,High,400,7758,NYSE,BB,Medium,300,20230223,BB,Medium,300,WMB,1000,BBB,High
+US9831341071,USD,System.Object[],"Wynn Resorts, Limited",B,Medium,200,7822,NASDAQ,B,Medium,208,20230223,B,Medium,222,WYNN,630,B,Medium
+US98389B1008,USD,System.Object[],Xcel Energy Inc.,B,Medium,270,7825,NASDAQ,B,Medium,215,20230223,B,Medium,218,XEL,703,B,Medium
+US98419M1009,USD,System.Object[],Xylem Inc.,BB,Medium,335,7853,NYSE,B,Medium,210,20230223,BB,Medium,301,XYL,846,BB,Medium
+US9884981013,USD,System.Object[],"Yum! Brands, Inc.",A,High,510,7885,NYSE,BB,Medium,315,20230223,BB,Medium,324,YUM,1149,BBB,High
+US9892071054,USD,System.Object[],Zebra Technologies Corporation,BB,Medium,388,7892,NASDAQ,BB,Medium,300,20230223,BB,Medium,328,ZBRA,1016,BBB,High
+US98956P1021,USD,System.Object[],"Zimmer Biomet Holdings, Inc.",A,High,540,7905,NYSE,BB,Medium,300,20230223,BB,Medium,309,ZBH,1149,BBB,High
+US9897011071,USD,System.Object[],"Zions Bancorporation, National Association",B,Medium,200,7906,NASDAQ,B,Medium,200,20230223,B,Medium,200,ZION,600,B,Medium
+US98978V1035,USD,System.Object[],Zoetis Inc.,A,High,562,7911,NYSE,BB,Medium,300,20230223,BB,Medium,314,ZTS,1176,BBB,High
