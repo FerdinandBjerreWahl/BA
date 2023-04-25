@@ -1,4 +1,5 @@
 from pandas_datareader import data as pdr
+from singleindex import get_by_rank 
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -109,12 +110,19 @@ def delete_pickle_file(filename):
 
 
 
-def get_filtered_stock_data(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=None, operator=None):
+def get_filtered_stock_data(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=None, operator=None, num=None, rf=None):
     data, isins, stock_data = load_or_process_data(file_path, prefixes, start_date, end_date)
     stock_data = stock_data['Adj Close']
+    
+    market_data = yf.download("^GSPC",start = start_date,end = end_date)
+    mreturn = market_data['Adj Close'].ffill().pct_change()
+    mreturn.index = pd.to_datetime(mreturn.index)
+    mreturn = mreturn.resample('y').sum()
     
     if isinstance(threshold, int):
         filtered_data = filter_by_value(stock_data, data, column_name, threshold, operator)
     elif threshold is None:
         filtered_data = filter_by_column(data,stock_data, column_name, column_value)
-    return filtered_data
+        
+    ranked_data = get_by_rank(filtered_data,mreturn,rf,num)
+    return ranked_data
