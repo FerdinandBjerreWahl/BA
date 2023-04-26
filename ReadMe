@@ -12,3 +12,4 @@ We start by introducing the concept of the efficient frontier and explaining its
 To access the data and run the efficient frontier for ESG data implementation, please run the function get_filtered_stock_data() from the fil DATA.py and run in the MAIN.ipynb. 
 The get_filtered_stock_data() function is used to filter the stock data based on different criteria. You can read most read what it exactly takes in the fil DATA.py.
 The efficient_frontier.py module contains utility functions for portfolio optimization, including the construction of the efficient frontier using ESG data and can also be run in MAIN.ipynb
+
