@@ -8,13 +8,41 @@ import os.path
 
 
 def read_data(file_path):
+    """ Reads data from file path.
+    
+    Args:
+        file_path (string): location of data file
+        
+    Returns:
+        DataFrame: Input data
+    """
     return pd.read_csv(file_path)
 
 def get_isins(data):
+    """ Isolates Isin codes from DataFrame
+    
+    Args:
+        data (DataFrame): Pandas DataFrame containing esg data
+    
+    Returns:
+        list: Isin codes
+    """
     return data['Isin'].tolist()
 
 
 def concatenate_data(prefixes, isindata, start_date, end_date):
+    """ Fixes timezone issues in data by isolating by prefix and rejoining the data
+    
+    Args:
+        prefixes (string): The different prefixes of isin codes in the loaded data
+        isindata (list): Isin codes to process
+        start_date (string): Start date of data
+        end_date (string): End date of data
+    
+    Returns:
+        DataFrame: Combined data with fixed timezones
+    
+    """
     yf.pdr_override()
     data_list = []
     for prefix in prefixes:
