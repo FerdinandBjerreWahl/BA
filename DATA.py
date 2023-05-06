@@ -113,10 +113,10 @@ def get_filtered_stock_data(file_path, column_name, column_value, prefixes, star
     data, isins, stock_data = load_or_process_data(file_path, prefixes, start_date, end_date)
     stock_data = stock_data['Adj Close']
     
-    market_data = yf.download("^GSPC",start = start_date,end = end_date)
-    mreturn = market_data['Adj Close'].ffill().pct_change()
-    mreturn.index = pd.to_datetime(mreturn.index)
-    mreturn = mreturn.resample('y').sum()
+    #market_data = yf.download("^GSPC",start = start_date,end = end_date)
+    #mreturn = market_data['Adj Close'].ffill().pct_change()
+    #mreturn.index = pd.to_datetime(mreturn.index)
+    #mreturn = mreturn.resample('y').sum()
     
     if isinstance(threshold, int):
         filtered_data = filter_by_value(stock_data, data, column_name, threshold, operator)
