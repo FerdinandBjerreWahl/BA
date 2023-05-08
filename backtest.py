@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-from Effient_Frontier import get_cov_mean_matrices
+from Effient_Frontier import get_mean_matrices
+from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
 def backtest(rf, esg, returns, score, window, num,lower_bound):
@@ -35,8 +36,8 @@ def backtest(rf, esg, returns, score, window, num,lower_bound):
         num_window = rwindow[names]
 
         #Get the mean return of the stocks and the covariance matrix
-        mu = get_cov_mean_matrices(num_window)[1]
-        cov = get_cov_mean_matrices(num_window)[2]
+        mu = get_mean_matrices(num_window)
+        cov = get_cov_matrices(num_window)[1]
         
         #Set the target, used for the efficient frontier module 
         target = np.linspace(np.min(mu), np.max(mu), 100)
@@ -50,12 +51,12 @@ def backtest(rf, esg, returns, score, window, num,lower_bound):
         #Get the mean returns for the next period
         next_mu_window = returns[i+window:i+window+1]
         next_mu_names = next_mu_window[names]
-        next_mu = get_cov_mean_matrices(next_mu_names)[1]
+        next_mu = get_mean_matrices(next_mu_names)
         
         #Get the covariance matrix from the current period i to the next i+1
         next_cov_window = returns[i+window-1:i+window+1]
         next_cov_names = next_cov_window[names]
-        cov = get_cov_mean_matrices(next_cov_names)[2]
+        cov = get_cov_matrices(next_cov_names)[1]
         
         #check_for_zeros(rwindow)
         #check_for_zeros(cov)

@@ -6,21 +6,32 @@ from DATA import get_filtered_stock_data as gfs
 from Rank_stocks import rank_stocks
 
 
-def get_cov_mean_matrices(returns):
-    '''Calculates covariance matrix and mean matrix from the returns 
+def get_mean_matrices(returns):
+    '''Calculates mean matrix from the returns 
     
     Args:
        returns(DataFrame) : A pandas DataFrame containing stock data of historical.      
      
     Returns:
-        The covariance matrix and mean matrix, both represented as numpy arrays.
+        The mean matrix, represented as numpy arrays.
     '''
     npreturns = returns.to_numpy()
     mean_matrix = np.array(returns.mean())
-    shrinkage_cov = ShrunkCovariance(shrinkage=0.2).fit(npreturns).covariance_
-    cov_matrix = np.array(returns.cov())
-    return cov_matrix, mean_matrix, shrinkage_cov
+    return mean_matrix
 
+def get_cov_matrices(returns, shrink = 0.2):
+    '''Calculates the covariance matrix and a shrinkage covariance matrix
+    
+    Args:
+       returns(DataFrame) : A pandas DataFrame containing stock data of historical.      
+     
+    Returns:
+        The covariance matrix and a shrinkage covariance matrix both represented as numpy arrays.
+    '''
+    npreturns = returns.to_numpy()
+    shrinkage_cov = ShrunkCovariance(shrinkage=shrink).fit(npreturns).covariance_
+    cov_matrix = np.array(returns.cov())
+    return cov_matrix, shrinkage_cov
 
 def objective_function(weights, cov_matrix):
     '''Computes the value of the objective function for a given set of weights and covariance matrix.
@@ -130,8 +141,8 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
         print(i)
         data = gfs(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=i, operator=operator) # retrieve the data
         stock_ranking = rank_stocks(data,num,rf)
-        mu = get_cov_mean_matrices(stock_ranking)[1]
-        cov = get_cov_mean_matrices(stock_ranking)[2]
+        mu = get_mean_matrices(stock_ranking)
+        cov = get_cov_matrices(stock_ranking)[1]
         bounds = [(0, 1) for _ in range(len(mu))]
         target = np.linspace(np.min(mu), np.max(mu), 100)
         # calculate the efficient frontier using the retrieved data
