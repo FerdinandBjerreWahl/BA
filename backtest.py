@@ -4,8 +4,8 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window, num):
-    '''
+def backtest(rf, esg, returns, score, window,get_plots,num=None):
+     '''
     Performs a backtest of a portfolio strategy over a given window of periods.
 
     Args:
@@ -15,7 +15,6 @@ def backtest(rf, esg, returns, score, window, num):
         score (str): The ESG score column name.
         window (int): The number of periods in each window.
         num (int): The number of top-ranked stocks to select for investing.
-        lower_bound (float): The lower bound constraint for portfolio weights.
 
     Returns:
         pd.DataFrame: A DataFrame containing the backtest results.
@@ -42,36 +41,52 @@ def backtest(rf, esg, returns, score, window, num):
         #The current window
         rwindow = returns[i:i+window]
         
-        #Create a dataframe of Sharpe ratios, then using the top 'num' stocks to select for investing
-        SRs = (rwindow.mean()-rf)/rwindow.std()
-        df = pd.DataFrame(SRs)
-        df = df.rename(columns={0: 'Sharperatio'})
-        df_sorted_desc = df.sort_values(by='Sharperatio', ascending=False)
-        names = df_sorted_desc.head(num).index.tolist()
-        num_window = rwindow[names]
+        if num is not None:
+            #Create a dataframe of Sharpe ratios, then using the top 'num' stocks to select for investing
+            if num > rwindow.shape[1]:
+                num = rwindow.shape[1]
+            SRs = (rwindow.mean()-rf)/rwindow.std()
+            df = pd.DataFrame(SRs)
+            df = df.rename(columns={0: 'Sharperatio'})
+            df_sorted_desc = df.sort_values(by='Sharperatio', ascending=False)
+            names = df_sorted_desc.head(num).index.tolist()
+            num_window = rwindow[names]
+            mu = get_mean_matrices(num_window)
+            cov = get_cov_matrices(num_window)[1]
+            
+            target = np.linspace(np.min(mu), np.max(mu), 100)
+            
+            bounds = [(0, 1) for _ in range(len(mu))]
+            
+            max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs , w_opt  = efficient_frontier(mu, cov, target, rf, bounds, num_window, esg, score,get_plots)
+        else:
+            mu = get_mean_matrices(rwindow)
+            cov = get_cov_matrices(rwindow)[1]
+            #Set the target, used for the efficient frontier module 
+            target = np.linspace(np.min(mu), np.max(mu), 100)
+        
+            #Create the bounds
+            bounds = [(0, 1) for _ in range(len(mu))]
+            max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs , w_opt  = efficient_frontier(mu, cov, target, rf, bounds, rwindow, esg, score,get_plots)
 
-        #Get the mean return of the stocks and the covariance matrix
-        mu = get_mean_matrices(num_window)
-        cov = get_cov_matrices(num_window)[1]
-        
-        #Set the target, used for the efficient frontier module 
-        target = np.linspace(np.min(mu), np.max(mu), 100)
-        
-        #Create the bounds
-        bounds = [(0, 1) for _ in range(len(mu))]
-        
-        #Alot of computation here is unessecary for the backtest. 
-        max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs , w_opt  = efficient_frontier(mu, cov, target, rf, bounds, esg, num_window, score,lower_bound)
         
         #Get the mean returns for the next period
         next_mu_window = returns[i+window:i+window+1]
-        next_mu_names = next_mu_window[names]
-        next_mu = get_mean_matrices(next_mu_names)
+        next_cov_window = returns[i+window-1:i+window+1]
+        
+        if num is not None:
+            next_mu_names = next_mu_window[names]
+            next_mu = get_mean_matrices(next_mu_names)
+            
+            next_cov_names = next_cov_window[names]
+            cov = get_cov_matrices(next_cov_names)[1]
+        else:
+            next_mu = get_mean_matrices(next_mu_window)
+            cov = get_cov_matrices(next_cov_window)[1]
+
         
         #Get the covariance matrix from the current period i to the next i+1
-        next_cov_window = returns[i+window-1:i+window+1]
-        next_cov_names = next_cov_window[names]
-        cov = get_cov_matrices(next_cov_names)[1]
+
         
         #check_for_zeros(rwindow)
         #check_for_zeros(cov)
@@ -83,6 +98,7 @@ def backtest(rf, esg, returns, score, window, num):
         
         portfolio_value.append(portfolio_value[i]*(1+realized_return))
         
+        print(w_opt)
         #A bunch of prints to see the results while code is running
         print("For window: ", i)
         print("Expected return: ", max_sharpe_ret)
@@ -121,3 +137,4 @@ def backtest(rf, esg, returns, score, window, num):
     df = pd.DataFrame(data, columns=['Expected returns', 'Realized returns', 'Expected stds', 'Realized stds', 'Expected srs', 'Realized srs', 'Portfolio Value','Portfolio E Score'])
     
     return df
+

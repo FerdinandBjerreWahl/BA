@@ -58,18 +58,8 @@ def constraint_function(weights):
     '''
     return np.sum(weights) - 1
 
-def weight_constraint(weights,lower_bound=0):
-    '''Calculates the weight constraint for a given set of weights.
 
-    Args:
-        weights (numpy.ndarray): The weights for each stock in the portfolio.
-        lower_bound (float, optional): The lower bound value for the weights. Defaults to 0.
-
-    Returns:
-        The weight constraint array as numpy.ndarray from a given set of weights and lower_bound'''
-    return np.concatenate((weights-lower_bound,np.array([1]-weights)))
-
-def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, get_plots = False):
+def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=None,get_plots = False):
     ''' The function efficient_frontier calculates the efficient frontier for a given set of expected returns and a covariance matrix,and also finds the portfolio with the highest Sharpe ratio and calculates Score for this
     Args:
         mu(numpy.ndarray) : Expected returns for each stock
@@ -112,18 +102,23 @@ def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, get_plo
             sharpe = (ret - rf) / vol
 
             frontier.append((ret, vol, sharpe))
-
-    w_opt = minimize(negativeSR, x0, method='SLSQP', bounds=bounds, options={'disp':True}, constraints=({'type': 'eq', 'fun': constraint_function})).x
-
+            
+    w_opt = minimize(negativeSR, x0, method='SLSQP', bounds=bounds, options=({'disp':True,'maxiter':1000}), constraints=[{'type': 'eq', 'fun': constraint_function}]).x
     result = 0
-    for count, col in enumerate(returns.columns):
-        first = esg[esg['Isin'] == col]
-        env = first[score]
-        env = env.to_numpy()[0]
-        result += w_opt[count] * env
+    if score is not None or esg is not None:
+        for count, col in enumerate(returns.columns):
+            first = esg[esg['Isin'] == col]
+            env = first[score]
+            env = env.to_numpy()[0]
+            result += w_opt[count] * env
 
     portfolio_esg.append(result)
 
+    #frontier = np.array(frontier)
+
+    #max_sharpe_idx = np.argmax(frontier[:, 2])
+    #max_sharpe_ret, max_sharpe_vol, max_sharpe_sr = frontier[max_sharpe_idx]
+    
     max_sharpe_ret = np.sum(mu * w_opt)
     max_sharpe_vol = np.sqrt(w_opt.T @ cov @ w_opt)
     max_sharpe_sr = (max_sharpe_ret - rf) / max_sharpe_vol
@@ -197,5 +192,6 @@ def ESG_efficient_frontier_gw(rf,returns,esg,score):
         print(i)
         weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score)
         Max_sharp.append(sharpe)
+        print('Sharp ratio', sharpe)
         ESG.append(ESG_score)             
     return Max_sharp,ESG
