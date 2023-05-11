@@ -134,6 +134,7 @@ def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=Non
 
 
 
+
 def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', operator=None, esg=None, rf=None, score=None): 
     '''
     Computes the Max_sharp and ESG based on specified criteria and constraints. In this case all the stocks ESG scores needs do be over the tresholds to be in the optimal portfolio.
@@ -154,7 +155,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
     Returns:
         A tuple containing two lists - Max_sharp and ESG calculated from all the inputs
     ''' 
-    thresholds = range(400,800,25) # create a list of thresholds to iterate over
+    thresholds = range(0,800,25) # create a list of thresholds to iterate over
     Max_sharp = []
     ESG = []
     for i in thresholds:
@@ -166,7 +167,9 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
         target = np.linspace(np.min(mu), np.max(mu), 100)
         efficient_frontier2 = efficient_frontier(mu, cov, target, rf, bounds, esg, data, score)
         Max_sharp.append(efficient_frontier2[2])
+        print('Sharp ratio:', efficient_frontier2[2])
         ESG.append(efficient_frontier2[3])
+        print('ESG score:', efficient_frontier2[3])
     return Max_sharp,ESG
 
 
@@ -192,6 +195,6 @@ def ESG_efficient_frontier_gw(rf,returns,esg,score):
         print(i)
         weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score)
         Max_sharp.append(sharpe)
-        print('Sharp ratio', sharpe)
+        print('Sharp ratio',sharpe)
         ESG.append(ESG_score)             
     return Max_sharp,ESG

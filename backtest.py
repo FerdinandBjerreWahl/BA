@@ -4,8 +4,8 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window,get_plots,num=None):
-     '''
+def backtest(rf, esg, returns, score, window,get_plots=False,num=None):
+    '''
     Performs a backtest of a portfolio strategy over a given window of periods.
 
     Args:
@@ -98,7 +98,7 @@ def backtest(rf, esg, returns, score, window,get_plots,num=None):
         
         portfolio_value.append(portfolio_value[i]*(1+realized_return))
         
-        print(w_opt)
+        #print(w_opt)
         #A bunch of prints to see the results while code is running
         print("For window: ", i)
         print("Expected return: ", max_sharpe_ret)
