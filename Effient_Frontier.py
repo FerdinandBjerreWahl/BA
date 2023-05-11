@@ -13,7 +13,7 @@ def get_mean_matrices(returns):
        returns(DataFrame) : A pandas DataFrame containing stock data of historical.      
      
     Returns:
-        The mean matrix, represented as numpy arrays.
+        The mean matrix of returns, represented as numpy arrays.
     '''
     npreturns = returns.to_numpy()
     mean_matrix = np.array(returns.mean())
@@ -26,7 +26,7 @@ def get_cov_matrices(returns, shrink = 0.2):
        returns(DataFrame) : A pandas DataFrame containing stock data of historical.      
      
     Returns:
-        The covariance matrix and a shrinkage covariance matrix both represented as numpy arrays.
+        The covariance matrix and a shrinkage covariance matrix both represented as numpy arrays of returns.
     '''
     npreturns = returns.to_numpy()
     shrinkage_cov = ShrunkCovariance(shrinkage=shrink).fit(npreturns).covariance_
@@ -59,9 +59,17 @@ def constraint_function(weights):
     return np.sum(weights) - 1
 
 def weight_constraint(weights,lower_bound=0):
+    '''Calculates the weight constraint for a given set of weights.
+
+    Args:
+        weights (numpy.ndarray): The weights for each stock in the portfolio.
+        lower_bound (float, optional): The lower bound value for the weights. Defaults to 0.
+
+    Returns:
+        The weight constraint array as numpy.ndarray from a given set of weights and lower_bound'''
     return np.concatenate((weights-lower_bound,np.array([1]-weights)))
 
-def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, lower_bound):
+def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, get_plots = False):
     ''' The function efficient_frontier calculates the efficient frontier for a given set of expected returns and a covariance matrix,and also finds the portfolio with the highest Sharpe ratio and calculates Score for this
     Args:
         mu(numpy.ndarray) : Expected returns for each stock
@@ -92,18 +100,18 @@ def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, lower_b
     
     frontier = []
     portfolio_esg = []
-    lower_bounds = lower_bound
-    for ret in target:
-        def ret_constraint(weights):
-            return np.dot(weights, mu) - ret
-        
-        res = minimize(objective_function, x0, args=(cov,), method='SLSQP', constraints=[{'type': 'eq', 'fun': constraint_function}, {'type': 'eq', 'fun': ret_constraint}, {'type': 'ineq', 'fun': weight_constraint, 'args': (lower_bounds,)}], bounds=bounds)
+    if get_plots == True:
+        for ret in target:
+            def ret_constraint(weights):
+                return np.dot(weights, mu) - ret
 
-        vol = np.sqrt(res.fun)
-      
-        sharpe = (ret - rf) / vol
+            res = minimize(objective_function, x0, args=(cov,), method='SLSQP', constraints=[{'type': 'eq', 'fun': constraint_function}, {'type': 'eq', 'fun': ret_constraint}], bounds=bounds)
 
-        frontier.append((ret, vol, sharpe))
+            vol = np.sqrt(res.fun)
+
+            sharpe = (ret - rf) / vol
+
+            frontier.append((ret, vol, sharpe))
 
     w_opt = minimize(negativeSR, x0, method='SLSQP', bounds=bounds, options={'disp':True}, constraints=({'type': 'eq', 'fun': constraint_function})).x
 
@@ -116,63 +124,78 @@ def efficient_frontier(mu, cov, target, rf, bounds, esg, returns, score, lower_b
 
     portfolio_esg.append(result)
 
-    frontier = np.array(frontier)
-
-    max_sharpe_idx = np.argmax(frontier[:, 2])
-    max_sharpe_ret, max_sharpe_vol, max_sharpe_sr = frontier[max_sharpe_idx]
-
+    max_sharpe_ret = np.sum(mu * w_opt)
+    max_sharpe_vol = np.sqrt(w_opt.T @ cov @ w_opt)
+    max_sharpe_sr = (max_sharpe_ret - rf) / max_sharpe_vol
+    
     stdevs = np.sqrt(np.diag(cov))
     stdevs_ = np.repeat(stdevs[:, np.newaxis], 100, axis=1)
     mu = np.repeat(mu[:, np.newaxis], 100, axis=1)
+    
+    frontier = np.array(frontier)
 
     return max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt
 
 
 
 
-def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', lower_bound=0, operator=None, esg=None, rf=None, score=None, num=None):
-     
-    thresholds = range(0,800,25) # create a list of thresholds to iterate over
-    
+def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', operator=None, esg=None, rf=None, score=None): 
+    '''
+    Computes the Max_sharp and ESG based on specified criteria and constraints. In this case all the stocks ESG scores needs do be over the tresholds to be in the optimal portfolio.
+    Args:
+        file_path (str): The path to the file containing the data.
+        column_name (str): The name of the column containing the data.
+        column_value (str): The value to filter the data column.
+        prefixes (list): Prefixes for the data columns.
+        start_date (str): The start date of the data range.
+        end_date (str): The end date of the data range.
+        time (str, optional): The time period of the data. Defaults to 'y'.
+        lower_bound (float, optional): The lower bound value for the weights. Defaults to 0.
+        operator (str, optional): The operator to use for filtering the data. Defaults to None.
+        esg (str, optional): The ESG criterion to consider. Defaults to None.
+        rf (float, optional): The risk-free rate. Defaults to None.
+        score (str, optional): The scoring method for ranking stocks. Defaults to None.
+
+    Returns:
+        A tuple containing two lists - Max_sharp and ESG calculated from all the inputs
+    ''' 
+    thresholds = range(400,800,25) # create a list of thresholds to iterate over
     Max_sharp = []
     ESG = []
-    
     for i in thresholds:
         print(i)
-        data = gfs(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=i, operator=operator) # retrieve the data
-        stock_ranking = rank_stocks(data,num,rf)
-        mu = get_mean_matrices(stock_ranking)
-        cov = get_cov_matrices(stock_ranking)[1]
+        data = gfs(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=i, operator=operator)
+        mu = get_mean_matrices(data)
+        cov = get_cov_matrices(data)[1]
         bounds = [(0, 1) for _ in range(len(mu))]
         target = np.linspace(np.min(mu), np.max(mu), 100)
-        # calculate the efficient frontier using the retrieved data
-        if stock_ranking.shape[1] >= num:
-            efficient_frontier2 = efficient_frontier(mu, cov, target, rf, bounds, esg, stock_ranking, score,lower_bound)
-            Max_sharp.append(efficient_frontier2[2])
-            print(efficient_frontier2[2])
-            ESG.append(efficient_frontier2[3])
-            #efficient_frontiers.append(efficient_frontier2)
-        else:
-            print('Failed attempt at threshold =',i,' too few stocks')
-    
+        efficient_frontier2 = efficient_frontier(mu, cov, target, rf, bounds, esg, data, score)
+        Max_sharp.append(efficient_frontier2[2])
+        ESG.append(efficient_frontier2[3])
     return Max_sharp,ESG
 
 
 
-def ESG_efficient_frontier_gw(num,rf,returns,esg,score):
+def ESG_efficient_frontier_gw(rf,returns,esg,score):
+    '''
+    Computes the Efficient ESG Frontier based on specified criteria and constraints. In this case all the stocks weighted average ESG scores needs do be over threshold to be in the optimal portfolio.
 
-    thresholds = range(0,800,25) # create a list of thresholds to iterate over
+    Args:
+        rf (float): The risk-free rate.
+        returns (numpy.ndarray): The returns data for the stocks.
+        esg (numpy.ndarray): The ESG data for the stocks.
+        score (str): The scoring method for ranking stocks.
+
+    Returns:
+        tuple: A tuple containing two lists - Max_sharp and ESG from all the inputs
+    '''
+    thresholds = range(400,800,25) # create a list of thresholds to iterate over
     
     Max_sharp = []
     ESG = []
     for i in thresholds:
         print(i)
-        stock_ranking = rank_stocks(returns,num,rf)
-        if stock_ranking.shape[1] >= num:
-            weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(stock_ranking,esg,i,rf,score)
-            Max_sharp.append(sharpe)
-            ESG.append(ESG_score)
-        else:
-            print('Failed attempt at threshold =',i,' too few stocks')     
-            
+        weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score)
+        Max_sharp.append(sharpe)
+        ESG.append(ESG_score)             
     return Max_sharp,ESG

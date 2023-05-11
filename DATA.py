@@ -7,13 +7,41 @@ import os.path
 
 
 def read_data(file_path):
+    ''' Reads data from file path.
+    
+    Args:
+        file_path (string): location of data file
+        
+    Returns:
+        DataFrame: Input data
+    '''
     return pd.read_csv(file_path)
 
 def get_isins(data):
+    ''' Isolates Isin codes from DataFrame
+    
+    Args:
+        data (DataFrame): Pandas DataFrame containing esg data
+    
+    Returns:
+        list: Isin codes
+    '''
     return data['Isin'].tolist()
 
 
 def concatenate_data(prefixes, isindata, start_date, end_date):
+    ''' Fixes timezone issues in data by isolating by prefix and rejoining the data
+    
+    Args:
+        prefixes (string): The different prefixes of isin codes in the loaded data
+        isindata (list): Isin codes to process
+        start_date (string): Start date of data
+        end_date (string): End date of data
+    
+    Returns:
+        DataFrame: Combined data with fixed timezones
+    
+    '''
     yf.pdr_override()
     data_list = []
     for prefix in prefixes:
@@ -27,6 +55,15 @@ def concatenate_data(prefixes, isindata, start_date, end_date):
     return combined_data
 
 def remove_null_columns(data):
+    '''
+    Remove columns from a DataFrame that contain null values (represented as 0).
+
+    Args:
+        data (pandas.DataFrame): The input DataFrame.
+
+    Returns:
+        A new DataFrame obtained by dropping the columns containing null values.
+    '''
     null_columns = []
     for col in data.columns:
         if (data[col]==0).any():
@@ -34,6 +71,18 @@ def remove_null_columns(data):
     return data.drop(columns=null_columns)
 
 def filter_by_column(data,stock_data, column_name, column_value=None):
+    '''
+    Filter stock data based on a specific column and its value.
+
+    Args:
+        data (pandas.DataFrame): The data used for filtering.
+        stock_data (pandas.DataFrame): The stock data to be filtered.
+        column_name (str): The name of the column used for filtering.
+        column_value (str): The value to filter the column by. If not provided, no filtering is applied.
+
+    Returns:
+        The filtered stock data based on the specified column and value, or the original stock data if no filtering is applied.
+    '''
     if column_value is not None:
         filtered = data[data[column_name] == column_value]
         data_isin = get_isins(filtered)
@@ -46,6 +95,19 @@ def filter_by_column(data,stock_data, column_name, column_value=None):
 
     
 def filter_by_value(stock_data, data, column_name, threshold=None, operator=None):
+    '''
+    Filter stock data based on a specific column and its value using a threshold and operator.
+
+    Args:
+        stock_data (pandas.DataFrame): The stock data to be filtered.
+        data (pandas.DataFrame): The data used for filtering.
+        column_name (str): The name of the column used for filtering.
+        threshold (optional): The threshold value for the filtering. If not provided, no filtering is applied.
+        operator (optional): The operator used for the comparison. Supported operators: 'leq' (less than or equal to),
+                             'geq' (greater than or equal to). If not provided, no filtering is applied.
+
+    Returns:
+       The filtered stock data based on the specified column, threshold, and operator, or the original stock data if no filtering is applied '''
     if threshold is not None:
         if operator == 'leq':
             filtered=data[data[column_name] <= threshold]
@@ -68,6 +130,16 @@ def filter_by_value(stock_data, data, column_name, threshold=None, operator=None
     
 
 def to_date(data,time='y'):
+    '''
+    Convert the data(stock_data) to a specified time frequency.
+
+    Args:
+        data (pandas.DataFrame): The data to be converted.
+        time (str): The time frequency to which the data will be converted. Default is 'y' (yearly).
+
+    Returns:
+        The converted data resampled to the specified time frequency.
+    '''
     adj_pct = data.ffill().pct_change()
     adj_pct.index = pd.to_datetime(adj_pct.index)
     result = adj_pct.resample(time).sum()
@@ -77,6 +149,19 @@ def to_date(data,time='y'):
 
 
 def load_or_process_data(file_path, prefixes, start_date, end_date, time='y'):
+    '''
+    Load or process data based on the file path and specified parameters.
+
+    Args:
+        file_path (str): The path to the data file.
+        prefixes (list): List of data prefixes.
+        start_date (str): The start date for data processing.
+        end_date (str): The end date for data processing.
+        time (str): The time frequency for data resampling. Default is 'y' (yearly).
+
+    Returns:
+        A tuple containing the loaded or processed data, ISINs, and stock data.
+    '''
 
     pickle_file_path = f"{file_path}.pickle"
     if os.path.isfile(pickle_file_path):
@@ -101,6 +186,15 @@ def load_or_process_data(file_path, prefixes, start_date, end_date, time='y'):
 
 
 def delete_pickle_file(filename):
+    '''
+    Delete a pickle file.
+
+    Args:
+        filename (str): The name of the pickle file to be deleted.
+
+    Returns:
+        None 
+    '''
     if os.path.exists(filename):
         os.remove(filename)
         print(f"File '{filename}' has been deleted.")
@@ -110,13 +204,27 @@ def delete_pickle_file(filename):
 
 
 def get_filtered_stock_data(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=None, operator=None):
+    '''
+    Get filtered stock data based on specified criteria.
+
+    Args:
+        file_path (str): The path to the data file.
+        column_name (str): The name of the column to filter on.
+        column_value: The value to filter on. If `threshold` is provided, this argument is ignored.
+        prefixes (list): A list of stock prefixes.
+        start_date (str): The start date of the data range.
+        end_date (str): The end date of the data range.
+        time (str): The time frequency for resampling the data. Default is 'y' (yearly).
+        threshold (int): The threshold value to use for filtering. Default is None.
+        operator (str): The operator to use for comparison when filtering by threshold. 
+                                 Possible values are 'leq' (less than or equal to) and 'geq' (greater than or equal to).
+                                 Default is None.
+
+    Returns:
+        The filtered stock data as dataframe
+    '''
     data, isins, stock_data = load_or_process_data(file_path, prefixes, start_date, end_date)
     stock_data = stock_data['Adj Close']
-    
-    #market_data = yf.download("^GSPC",start = start_date,end = end_date)
-    #mreturn = market_data['Adj Close'].ffill().pct_change()
-    #mreturn.index = pd.to_datetime(mreturn.index)
-    #mreturn = mreturn.resample('y').sum()
     
     if isinstance(threshold, int):
         filtered_data = filter_by_value(stock_data, data, column_name, threshold, operator)

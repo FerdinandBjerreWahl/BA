@@ -4,7 +4,22 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window, num,lower_bound):
+def backtest(rf, esg, returns, score, window, num):
+    '''
+    Performs a backtest of a portfolio strategy over a given window of periods.
+
+    Args:
+        rf (float): The risk-free rate.
+        esg (pd.DataFrame): The ESG data.
+        returns (pd.DataFrame): The returns data for the stocks.
+        score (str): The ESG score column name.
+        window (int): The number of periods in each window.
+        num (int): The number of top-ranked stocks to select for investing.
+        lower_bound (float): The lower bound constraint for portfolio weights.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the backtest results.
+    '''
     #Find the how many periods the data has
     n = returns.shape[0]
     

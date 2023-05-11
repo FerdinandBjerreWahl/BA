@@ -4,6 +4,19 @@ from scipy.optimize import minimize
 from sklearn.covariance import ShrunkCovariance
 
 def greenwashing(returns,esg,ESG_threshold,rf,score):
+    '''
+    Computes the optimized portfolio with ESG constraints.
+
+    Args:
+        returns (pd.DataFrame): The returns data for the stocks.
+        esg (pd.DataFrame): The ESG data for the stocks.
+        ESG_threshold (float): The ESG threshold value.
+        rf (float): The risk-free rate.
+        score (str): The scoring method for ranking stocks.
+
+    Returns:
+       A tuple containing the optimized weights, optimized Sharpe ratio, realized return, realized standard deviation, and realized ESG score.'''
+
     #Get the esg data and transform it such that it can be used in calculations
     ESG2 = 1000
     esgdf = pd.DataFrame((esg['Isin'],esg[score])).transpose()
@@ -23,10 +36,7 @@ def greenwashing(returns,esg,ESG_threshold,rf,score):
     
         # Apply the ESG constraint by adding a penalty term to the objective function
         if ESG_score < ESG_threshold or ESG_score > ESG2:
-            #print("Før",sharpe_ratio)
             sharpe_ratio *= 0.1
-            #print('Efter',sharpe_ratio)
-            #print('Negativ',-sharpe_ratio)
         return -sharpe_ratio
     
     init_guess = np.ones(len(topESG)) / len(topESG)
