@@ -4,8 +4,8 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window,get_plots,num=None):
-     '''
+def backtest(rf, esg, returns, score, window,get_plots=False,num=None):
+    '''
     Performs a backtest of a portfolio strategy over a given window of periods.
 
     Args:
@@ -17,9 +17,8 @@ def backtest(rf, esg, returns, score, window,get_plots,num=None):
         num (int): The number of top-ranked stocks to select for investing.
 
     Returns:
-        pd.DataFrame: A DataFrame containing the backtest results.
-    '''
-    #Find the how many periods the data has
+        pd.DataFrame: A DataFrame containing the backtest results.'''
+     #Find the how many periods the data has
     n = returns.shape[0]
     
     #Create a list with the initial value 100. This is used to see how much an investment of 100 would have developed over the periods
@@ -37,10 +36,11 @@ def backtest(rf, esg, returns, score, window,get_plots,num=None):
     portfolio_esgs = []
     
     #Loop over the periods
-    for i in range(n-window-1):
+    print("n is ", n)
+    for i in range(n-window):
         #The current window
         rwindow = returns[i:i+window]
-        
+        print("Current loop ",i)
         if num is not None:
             #Create a dataframe of Sharpe ratios, then using the top 'num' stocks to select for investing
             if num > rwindow.shape[1]:
@@ -98,7 +98,7 @@ def backtest(rf, esg, returns, score, window,get_plots,num=None):
         
         portfolio_value.append(portfolio_value[i]*(1+realized_return))
         
-        print(w_opt)
+        #print(w_opt)
         #A bunch of prints to see the results while code is running
         print("For window: ", i)
         print("Expected return: ", max_sharpe_ret)
