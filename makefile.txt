@@ -1,0 +1,17 @@
+# Set the default target
+default: test
+
+# Define targets and commands
+install:
+    pip install -r requirements.txt
+
+test:
+    pytest tests/
+
+notebook:
+    jupyter nbconvert --execute --to html Covarians_and_mean_test.ipynb
+
+clean:
+    rm -rf __pycache__ .pytest_cache
+
+.PHONY: default install test notebook clean

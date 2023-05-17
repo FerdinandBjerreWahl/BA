@@ -4,7 +4,7 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window,get_plots=False,num=None):
+def backtest(rf, esg, returns, score, window,get_plots=False,num=None,test=False):
     '''
     Performs a backtest of a portfolio strategy over a given window of periods.
 
@@ -36,11 +36,9 @@ def backtest(rf, esg, returns, score, window,get_plots=False,num=None):
     portfolio_esgs = []
     
     #Loop over the periods
-    print("n is ", n)
     for i in range(n-window):
         #The current window
         rwindow = returns[i:i+window]
-        print("Current loop ",i)
         if num is not None:
             #Create a dataframe of Sharpe ratios, then using the top 'num' stocks to select for investing
             if num > rwindow.shape[1]:
@@ -100,13 +98,14 @@ def backtest(rf, esg, returns, score, window,get_plots=False,num=None):
         
         #print(w_opt)
         #A bunch of prints to see the results while code is running
-        print("For window: ", i)
-        print("Expected return: ", max_sharpe_ret)
-        print("Realized return: ", realized_return)
-        print("Expected volatility: ", max_sharpe_vol)
-        print("Realized volatility: ", realized_std)
-        print("Portfolio value: ",portfolio_value[i]*(1+realized_return))
-        print("\n")
+        if test == False:
+            print("For window: ", i)
+            print("Expected return: ", max_sharpe_ret)
+            print("Realized return: ", realized_return)
+            print("Expected volatility: ", max_sharpe_vol)
+            print("Realized volatility: ", realized_std)
+            print("Portfolio value: ",portfolio_value[i]*(1+realized_return))
+            print("\n")
         
         #Append results to the lists
         expected_srs.append(max_sharpe_sr)

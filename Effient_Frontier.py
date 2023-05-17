@@ -102,7 +102,7 @@ def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=Non
 
             frontier.append((ret, vol, sharpe))
             
-    w_opt = minimize(negativeSR, x0, method='SLSQP', bounds=bounds, options=({'disp':True,'maxiter':1000}), constraints=[{'type': 'eq', 'fun': constraint_function}]).x
+    w_opt = minimize(negativeSR, x0, method='SLSQP', bounds=bounds, options=({'disp':False,'maxiter':1000}), constraints=[{'type': 'eq', 'fun': constraint_function}]).x
     result = 0
     if score is not None or esg is not None:
         for count, col in enumerate(returns.columns):
