@@ -1,0 +1,4 @@
+Isin,CurrencyCode,Ticker,company_name,environment_grade,environment_level,environment_score,esg_id,exchange_symbol,governance_grade,governance_level,governance_score,last_processing_date,social_grade,social_level,social_score,stock_symbol,total,total_grade,total_level
+"A,USD,System.Object[],""A company"",A,High,600,390,NYSE,BB,Medium,314,20230221,BB,Medium,315,AIG,1167,BBB,High"
+"B,USD,System.Object[],""B company"",A,High,500,390,NYSE,BB,Medium,314,20230221,BB,Medium,315,AIG,1167,BBB,High"
+"C,USD,System.Object[],""C company"",A,High,400,390,NYSE,BB,Medium,314,20230221,BB,Medium,315,AIG,1167,BBB,High"
