@@ -154,7 +154,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
     Max_sharp = []
     ESG = []
     for i in thresholds:
-        print(i)
+        print("For threshold: ",i)
         data = gfs(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', threshold=i, operator=operator)
         mu = get_mean_matrices(data)
         cov = get_cov_matrices(data)[1]
@@ -165,6 +165,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
         print('Sharp ratio:', efficient_frontier2[2])
         ESG.append(efficient_frontier2[3])
         print('ESG score:', efficient_frontier2[3])
+        print('\n')
     return Max_sharp,ESG
 
 
@@ -187,7 +188,7 @@ def ESG_efficient_frontier_gw(rf,returns,esg,score):
     Max_sharp = []
     ESG = []
     for i in thresholds:
-        print(i)
+        print("For threshold: ",i)
         weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score)
         Max_sharp.append(sharpe)
         print('Sharp ratio',sharpe)

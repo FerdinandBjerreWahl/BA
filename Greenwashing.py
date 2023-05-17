@@ -24,7 +24,8 @@ def greenwashing(returns,esg,ESG_threshold,rf,score):
     esgdf = esgdf.drop('Isin',axis=1)
     
     topESG = esgdf.loc[returns.columns.to_list()]
-    topESG = topESG[~topESG.index.duplicated(keep='first')].to_numpy()   
+    topESG = topESG[~topESG.index.duplicated(keep='first')].to_numpy() 
+    
     def optimize_portfolio(weights, stock_data, ESG_data, ESG_threshold,rf):
         portfolio_return = np.sum(returns.mean() @ weights)
         #måske brug shrinkage cov
