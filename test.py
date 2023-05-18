@@ -22,7 +22,7 @@ def mean_test(x):
     Performs a test on the mean calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     df = pd.DataFrame(x)
     mean_array = df.mean().to_numpy()
     mean = np.array([4,5,6])
@@ -34,7 +34,7 @@ def cov_test(x):
     Performs a test on the covariance calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     covtest = np.array([[9,9,9],
                 [9,9,9],
                 [9,9,9]])
@@ -48,7 +48,7 @@ def returns_test(x):
     Performs a test on the returns calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     weights = np.array([1/3,1/3,1/3])
     test_return = 5
     df = pd.DataFrame(x)
@@ -61,7 +61,7 @@ def deviation_test(x):
     Performs a test on the standard deviation calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     df = pd.DataFrame(x)
     cov = df.cov().to_numpy()
     weights = np.array([1/3,1/3,1/3])
@@ -73,7 +73,7 @@ def efficientfrontier_test(x):
     Performs a test on the efficient frontier calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     file_path = "ESG_US.csv"
     esg = pd.read_csv(file_path)
     
@@ -101,7 +101,7 @@ def backtest_test(x):
     Performs a test on the backtest calculations given a predefined return matrix x
 
     Args:
-        x: A return matrix in the form of a dataframe'''
+        x: A return matrix in numpy'''
     result = np.array([4.5,9,1.5,1.5,3,6,1000,680])
     
     rf = 0.0
@@ -126,6 +126,27 @@ def backtest_test(x):
     assert np.allclose(result,btnp), "Backtest calculations failed"
     return "Passed"
 
+def optimizer_test(x):
+    '''
+    A test to see if the efficient frontier method will invest 100% into index 0 stock
+    
+    Args:
+        x: A return matrix in numpy
+    '''
+    df = pd.DataFrame(x)
+    mean = df.mean().to_numpy()
+    
+    cov = df.cov().to_numpy()
+    
+    bounds = [(0, 1) for _ in range(len(mean))] 
+    
+    target = np.linspace(np.min(mean), np.max(mean), 100)
+    
+    rf = 0.0
+    
+    max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt = efficient_frontier(mean, cov, target, rf, bounds, df, esg=None, score=None,get_plots = False)
+    assert np.allclose(w_opt,np.array([1,0,0])), "The optimizer test failed"
+    return "Passed"
     
 def test_all():
     '''
@@ -135,12 +156,18 @@ def test_all():
                        [4,5,6],
                        [7,8,9]])
     
+    matrix = np.array([[-1.0, -3, -5],
+                   [2.0, 3.0, 4.0],
+                   [3.0, 4, 5.0]])
+
+
     test_results = {
     'Mean calculation test': mean_test(x),
     'Covariance calculations test': cov_test(x),
     'Returns calculations test': returns_test(x),
     'Standard deviation calculations test': deviation_test(x),
     'Optimal weights calculations test': efficientfrontier_test(x)[0],
+    'Optimizer test': optimizer_test(matrix),
     'Weighted E score of portfolio': efficientfrontier_test(x)[1],
     'Backtest calculations':  backtest_test(x),
     'All tests': 'Passed'}
