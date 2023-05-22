@@ -45,7 +45,7 @@ def print_function_comments(func):
         print(f"No comments found for {func.__name__}.")
         
 
-def named_weights(returns,w_opt):
+def named_weights(returns,w_opt, file_path):
     """
     Combines the weights with the names of the companies in a dataframe
     
@@ -56,10 +56,10 @@ def named_weights(returns,w_opt):
     Returns:
         A dataframe of optimal weights with the associated names of the companies
      """
-    combined_data = pd.DataFrame({'Column': get_company_names(returns.columns.to_numpy(), pd.read_csv("ESG_US.csv")), 'Weights': w_opt.round(3)})
+    combined_data = pd.DataFrame({'Column': get_company_names(returns.columns.to_numpy(), pd.read_csv(file_path)), 'Weights': w_opt.round(3)})
     return combined_data
 
-def user_weights(returns,w_opt):
+def user_weights(returns,w_opt,file_path):
     """
     A user friendly method to display the optimal weights
     
@@ -70,7 +70,7 @@ def user_weights(returns,w_opt):
     Returns:
         A dataframe where the optimal weights for each company is listed. All weights which are 0 are removed for user friendlyness
     """
-    combined_data = named_weights(returns,w_opt)
+    combined_data = named_weights(returns,w_opt,file_path)
     display(combined_data[(combined_data != 0).all(1)].sum())
     df = combined_data[(combined_data != 0).all(1)]
     return df
