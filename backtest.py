@@ -4,7 +4,7 @@ from Effient_Frontier import get_mean_matrices
 from Effient_Frontier import get_cov_matrices
 from Effient_Frontier import efficient_frontier 
 
-def backtest(rf, esg, returns, score, window,get_plots=False,num=None,test=False):
+def backtest(rf, esg, returns, score, window, get_plots=False, num=None, test=False):
     '''
     Performs a backtest of a portfolio strategy over a given window of periods.
 
@@ -18,8 +18,21 @@ def backtest(rf, esg, returns, score, window,get_plots=False,num=None,test=False
 
     Returns:
         pd.DataFrame: A DataFrame containing the backtest results.'''
-     #Find the how many periods the data has
+    #Test if inputs are of the correct type
+    assert isinstance(rf,float), "Program failed: input 'rf' not of type float"
+    assert isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
+    assert isinstance(score,str), "Program failed: input 'score' not of type str"
+    assert isinstance(window,int), "Program failed: input 'window' not of type int"
+    assert isinstance(get_plots,bool), "Program failed: input 'get_plots' not of type bool"
+    assert num is None or isinstance(num,int), "Program failed: input 'num' not of type int or None"
+    assert isinstance(test,bool), "Program failed: input 'test' not of type bool"
+    
+    
+    #Find the how many periods the data has
     n = returns.shape[0]
+    
+    assert window < n, "Program failed: input 'window' greater than number of periods in the input 'returns'"
     
     #Create a list with the initial value 100. This is used to see how much an investment of 100 would have developed over the periods
     portfolio_value = [100]

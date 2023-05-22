@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import minimize
 from sklearn.covariance import ShrunkCovariance
 
-def greenwashing(returns,esg,ESG_threshold,rf,score):
+def greenwashing(returns,esg,ESG_threshold,rf,score,last_optimal = None):
     '''
     Computes the optimized portfolio with ESG constraints.
 
@@ -13,10 +13,18 @@ def greenwashing(returns,esg,ESG_threshold,rf,score):
         ESG_threshold (float): The ESG threshold value.
         rf (float): The risk-free rate.
         score (str): The scoring method for ranking stocks.
+        last_optimal (np.array): The guess from the last iteration to lower running time
 
     Returns:
        A tuple containing the optimized weights, optimized Sharpe ratio, realized return, realized standard deviation, and realized ESG score.'''
-
+    #Test if inputs are of the correct type
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
+    assert isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
+    assert isinstance(ESG_threshold,int), "Program failed: input 'ESG_threshold' not of type int"
+    assert isinstance(rf,float), "Program failed: input 'rf' not of type float"
+    assert isinstance(score,str), "Program failed: input 'score' not of type str"
+    assert last_optimal is None or isinstance(last_optimal, np.ndarray), "Program failed: input 'last_optimal' not of type ndarray"
+    
     #Get the esg data and transform it such that it can be used in calculations
     ESG2 = 1000
     esgdf = pd.DataFrame((esg['Isin'],esg[score])).transpose()
@@ -40,7 +48,10 @@ def greenwashing(returns,esg,ESG_threshold,rf,score):
             sharpe_ratio *= 0.1
         return -sharpe_ratio
     
-    init_guess = np.ones(len(topESG)) / len(topESG)
+    if last_optimal is not None:
+        init_guess = last_optimal
+    else:
+        init_guess = np.ones(len(topESG)) / len(topESG)
     
     bounds = [(0, 1) for _ in range(len(topESG))]
     
@@ -48,7 +59,7 @@ def greenwashing(returns,esg,ESG_threshold,rf,score):
                {'type': 'ineq', 'fun': lambda x: np.dot(x,topESG) - ESG_threshold},
                {'type': 'ineq', 'fun': lambda x: ESG2 - np.dot(x,topESG)})
 
-    result = minimize(optimize_portfolio, init_guess, args=(returns, esg, ESG_threshold,rf), bounds=bounds, constraints=constraint)
+    result = minimize(optimize_portfolio, init_guess, args=(returns, esg, ESG_threshold,rf), bounds=bounds, constraints=constraint,tol=0.01)
     
     realized_return = np.sum(returns.mean() @ result.x)
     npreturns = returns.to_numpy()

@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from scipy.optimize import minimize
 from sklearn.covariance import ShrunkCovariance
 from Greenwashing import greenwashing
@@ -14,6 +15,7 @@ def get_mean_matrices(returns):
     Returns:
         The mean matrix of returns, represented as numpy arrays.
     '''
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
     npreturns = returns.to_numpy()
     mean_matrix = np.array(returns.mean())
     return mean_matrix
@@ -27,6 +29,8 @@ def get_cov_matrices(returns, shrink = 0.2):
     Returns:
         The covariance matrix and a shrinkage covariance matrix both represented as numpy arrays of returns.
     '''
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
+    assert returns.shape[0] >= 2, "Program failed: 'returns' input has less than 2 periods, covariance calculations not possible"
     npreturns = returns.to_numpy()
     shrinkage_cov = ShrunkCovariance(shrinkage=shrink).fit(npreturns).covariance_
     cov_matrix = np.array(returns.cov())
@@ -76,7 +80,18 @@ def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=Non
         portfolio_esg : Containing the ESG score of the portfolio for each desired return in target
         frontier : The expected return, volatility, and Sharpe ratio for each point on the efficient frontier
         mu : Expected returns for use in plotting the efficient frontier
-        stdevs_ : Repeated standard deviations for use in plotting the efficient frontier'''  
+        stdevs_ : Repeated standard deviations for use in plotting the efficient frontier'''
+    #Tests that input are correct
+    assert isinstance(mu,np.ndarray), "Program failed: input 'mu' not of type numpy.ndarray"
+    assert isinstance(cov,np.ndarray), "Program failed: input 'cov' not of type numpy.ndarray"
+    assert isinstance(target,np.ndarray), "Program failed: input 'target' not of type numpy.ndarray"
+    assert isinstance(rf, float), "Program failed: input 'rf' not of type float"
+    assert isinstance(bounds,list), "Program failed: input 'bounds' not of type list"
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
+    assert esg is None or isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
+    assert score is None or isinstance(score,str), "Program failed: input 'score' not of type str"
+    assert isinstance(get_plots,bool), "Program failed: input 'get_plots' not of type bool"
+    
     def negativeSR(w, mu=mu, cov=cov, rf=rf):
         
         w = np.array(w)
@@ -150,6 +165,20 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
     Returns:
         A tuple containing two lists - Max_sharp and ESG calculated from all the inputs
     ''' 
+    #Tests that input are correct
+    assert isinstance(file_path,str), "Program failed: input 'file_path' not of type str"
+    assert isinstance(column_name,str), "Program failed: input 'column_name' not of type str"
+    assert isinstance(column_value,str), "Program failed: input 'column_value' not of type str"
+    assert isinstance(prefixes,list), "Program failed: input 'prefixes' not of type list"
+    assert isinstance(start_date,str), "Program failed: input 'start_date' not of type str"
+    assert isinstance(end_date,str), "Program failed: input 'end_date' not of type str"
+    assert isinstance(time,str), "Program failed: input 'time' not of type str"
+    assert operator is None or isinstance(operator,str), "Program failed: input 'operator' not of type str"
+    assert esg is None or isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
+    assert rf is None or isinstance(rf, float), "Program failed: input 'rf' not of type float"
+    assert score is None or isinstance(score,str), "Program failed: input 'score' not of type str"
+    assert isinstance(get_plots,bool), "Program failed: input 'get_plots' not of type bool"
+    
     thresholds = range(0,800,25) # create a list of thresholds to iterate over
     Max_sharp = []
     ESG = []
@@ -164,7 +193,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
         Max_sharp.append(efficient_frontier2[2])
         print('Sharp ratio:', efficient_frontier2[2])
         ESG.append(efficient_frontier2[3])
-        print('ESG score:', efficient_frontier2[3])
+        print('ESG score:', efficient_frontier2[3][0])
         print('\n')
     return Max_sharp,ESG
 
@@ -183,14 +212,20 @@ def ESG_efficient_frontier_gw(rf,returns,esg,score):
     Returns:
         tuple: A tuple containing two lists - Max_sharp and ESG from all the inputs
     '''
+    assert isinstance(rf,float), "Program failed: input 'rf' not of type float"
+    assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
+    assert isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
+    assert isinstance(score,str), "Program failed: input 'score' not of type str"
     thresholds = range(400,800,25) # create a list of thresholds to iterate over
     
+    last_optimal = None
     Max_sharp = []
     ESG = []
     for i in thresholds:
         print("For threshold: ",i)
-        weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score)
+        weights, sharpe, realized_return, realized_std, ESG_score = greenwashing(returns,esg,i,rf,score, last_optimal)
         Max_sharp.append(sharpe)
         print('Sharp ratio',sharpe)
-        ESG.append(ESG_score)             
+        ESG.append(ESG_score)
+        last_optimal = weights
     return Max_sharp,ESG
