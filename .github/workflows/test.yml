@@ -1,0 +1,30 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: windows-latest  # Specify the Windows runner environment
+
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]  # Define the Python versions
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Checkout the repository code
+
+      - name: Set Up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}  # Use the specific Python version from the matrix
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt  # Install project dependencies
+
+      - name: Run Tests
+        run: python test.py  # Replace 'test.py' with your test script name
