@@ -26,5 +26,9 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt  # Install project dependencies
 
+      - name: Copy ESG_US.csv
+        run: cp ESG_US.csv $GITHUB_WORKSPACE/ESG_US.csv
+
       - name: Run Tests
         run: python test.py  # Replace 'test.py' with your test script name
+
