@@ -145,9 +145,6 @@ def to_date(data,time):
     result = adj_pct.resample(time).sum()
     return result
 
-
-
-
 def load_or_process_data(file_path, prefixes, start_date, end_date, time):
     '''
     Load or process data based on the file path and specified parameters.
@@ -157,7 +154,7 @@ def load_or_process_data(file_path, prefixes, start_date, end_date, time):
         prefixes (list): List of data prefixes.
         start_date (str): The start date for data processing.
         end_date (str): The end date for data processing.
-        time (str): The time frequency for data resampling. Default is 'y' (yearly).
+        time (str): The time frequency for data resampling.
 
     Returns:
         A tuple containing the loaded or processed data, ISINs, and stock data.
@@ -166,23 +163,24 @@ def load_or_process_data(file_path, prefixes, start_date, end_date, time):
     pickle_file_path = f"{file_path}.pickle"
     if os.path.isfile(pickle_file_path):
         with open(pickle_file_path, "rb") as f:
-            data = pickle.load(f)
-            isins = pickle.load(f)
-            stock_data = pickle.load(f)
+            loaded_data = pickle.load(f)
+            data = loaded_data[0]
+            isins = loaded_data[1]
+            initial_stock_data = loaded_data[2]
+            stock_data = to_date(initial_stock_data, time)
+            stock_data = remove_null_columns(stock_data)
     else:
         data = read_data(file_path)
         isins = get_isins(data)
-        stock_data = concatenate_data(prefixes, isins, start_date, end_date)
-        stock_data = to_date(stock_data, time)
+        initial_stock_data = concatenate_data(prefixes, isins, start_date, end_date)
+        stock_data = to_date(initial_stock_data, time)
         stock_data = remove_null_columns(stock_data)
 
-    
         with open(pickle_file_path, "wb") as f:
-            pickle.dump(data, f)
-            pickle.dump(isins, f)
-            pickle.dump(stock_data, f)
+            pickle.dump((data, isins, initial_stock_data), f)
             
     return data, isins, stock_data
+
 
 
 def delete_pickle_file(filename):
