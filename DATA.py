@@ -129,7 +129,7 @@ def filter_by_value(stock_data, data, column_name, threshold=None, operator=None
         return stock_data
     
 
-def to_date(data,time='y'):
+def to_date(data,time):
     '''
     Convert the data(stock_data) to a specified time frequency.
 
@@ -148,7 +148,7 @@ def to_date(data,time='y'):
 
 
 
-def load_or_process_data(file_path, prefixes, start_date, end_date, time='y'):
+def load_or_process_data(file_path, prefixes, start_date, end_date, time):
     '''
     Load or process data based on the file path and specified parameters.
 
@@ -223,7 +223,7 @@ def get_filtered_stock_data(file_path, column_name, column_value, prefixes, star
     Returns:
         The filtered stock data as dataframe
     '''
-    data, isins, stock_data = load_or_process_data(file_path, prefixes, start_date, end_date)
+    data, isins, stock_data = load_or_process_data(file_path, prefixes, start_date, end_date,time)
     stock_data = stock_data['Adj Close']
     
     if isinstance(threshold, int):
