@@ -73,8 +73,8 @@ def greenwashing(returns,esg,ESG_threshold,rf,score,last_optimal = None):
     print('Optimal weights:', np.round(result.x,4))
     print('Optimized Sharpe ratio:', -result.fun)
     print('Sharp ratio', sharp_ration)
-    print('Reazlied return', realized_return)
-    print('Realized std',realized_std)
+    print('Expected return', realized_return)
+    print('Expected std',realized_std)
     print('ESG score', realized_ESG)
     
     return result.x, -result.fun, realized_return, realized_std, realized_ESG
