@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9]  # Define the Python versions
+        python-version: [3.6, 3.7, 3.8, 3.9]  # Define the Python versions
 
     steps:
       - name: Checkout Repository
@@ -26,9 +26,25 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt  # Install project dependencies
 
-      - name: Copy ESG_US.csv
+      - name: Copy Data File
         run: cp ESG_US.csv $GITHUB_WORKSPACE/ESG_US.csv
+
+      - name: Create test_results Directory
+        run: mkdir $GITHUB_WORKSPACE/test_results
 
       - name: Run Tests
         run: python test.py  # Replace 'test.py' with your test script name
 
+  final:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Checkout the repository code
+
+      - name: Archive Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: ${{ github.workspace }}/test_results
