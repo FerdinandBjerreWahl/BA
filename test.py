@@ -74,8 +74,30 @@ def efficientfrontier_test(x):
 
     Args:
         x: A return matrix in numpy'''
-    file_path = "ESG_US.csv"
-    esg = pd.read_csv(file_path)
+    #file_path = "ESG_US.csv"
+    #esg = pd.read_csv(file_path)
+    
+    col = np.array(['Isin', 'CurrencyCode', 'Ticker', 'company_name',
+       'environment_grade', 'environment_level', 'environment_score',
+       'esg_id', 'exchange_symbol', 'governance_grade',
+       'governance_level', 'governance_score', 'last_processing_date',
+       'social_grade', 'social_level', 'social_score', 'stock_symbol',
+       'total', 'total_grade', 'total_level'])
+    
+    dat = np.array([['US0268747849', 'USD', 'System.Object[]',
+        'American International Group, Inc.', 'A', 'High', 538, 390,
+        'NYSE', 'BB', 'Medium', 314, 20230221, 'BB', 'Medium', 315,
+        'AIG', 1167, 'BBB', 'High'],
+       ['US03027X1000', 'USD', 'System.Object[]',
+        'American Tower Corporation (REIT)', 'A', 'High', 515, 415,
+        'NYSE', 'BB', 'Medium', 305, 20230221, 'BB', 'Medium', 314,
+        'AMT', 1134, 'BBB', 'High'],
+       ['US0304201033', 'USD', 'System.Object[]',
+        'American Water Works Company, Inc.', 'AA', 'Excellent', 680,
+        418, 'NYSE', 'BB', 'Medium', 300, 20230221, 'BBB', 'High', 407,
+        'AWK', 1387, 'A', 'High']])
+    
+    esg = pd.DataFrame(dat,columns=col)
     
     df = pd.DataFrame(x)
     mean = df.mean().to_numpy()
@@ -105,8 +127,27 @@ def backtest_test(x):
     result = np.array([4.5,9,1.5,1.5,3,6,1000,680])
     
     rf = 0.0
-    file_path = "ESG_US.csv"
-    esg = pd.read_csv(file_path)
+    col = np.array(['Isin', 'CurrencyCode', 'Ticker', 'company_name',
+       'environment_grade', 'environment_level', 'environment_score',
+       'esg_id', 'exchange_symbol', 'governance_grade',
+       'governance_level', 'governance_score', 'last_processing_date',
+       'social_grade', 'social_level', 'social_score', 'stock_symbol',
+       'total', 'total_grade', 'total_level'])
+    
+    dat = np.array([['US0268747849', 'USD', 'System.Object[]',
+        'American International Group, Inc.', 'A', 'High', 538, 390,
+        'NYSE', 'BB', 'Medium', 314, 20230221, 'BB', 'Medium', 315,
+        'AIG', 1167, 'BBB', 'High'],
+       ['US03027X1000', 'USD', 'System.Object[]',
+        'American Tower Corporation (REIT)', 'A', 'High', 515, 415,
+        'NYSE', 'BB', 'Medium', 305, 20230221, 'BB', 'Medium', 314,
+        'AMT', 1134, 'BBB', 'High'],
+       ['US0304201033', 'USD', 'System.Object[]',
+        'American Water Works Company, Inc.', 'AA', 'Excellent', 680,
+        418, 'NYSE', 'BB', 'Medium', 300, 20230221, 'BBB', 'High', 407,
+        'AWK', 1387, 'A', 'High']])
+    
+    esg = pd.DataFrame(dat,columns=col)
    
     
     score = 'environment_score'

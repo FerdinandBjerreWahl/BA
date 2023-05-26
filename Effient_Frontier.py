@@ -124,7 +124,7 @@ def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=Non
             first = esg[esg['Isin'] == col]
             env = first[score]
             env = env.to_numpy()[0]
-            result += w_opt[count] * env
+            result += w_opt[count] * float(env)
 
     portfolio_esg.append(result)
 
