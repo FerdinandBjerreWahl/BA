@@ -115,7 +115,7 @@ def efficientfrontier_test(x):
     max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt = efficient_frontier(mean, cov, target, rf, bounds, df, esg=esg, score='environment_score',get_plots = False)
     
     assert np.allclose(w_opt,np.array([0,0,1])), "The optimal weights calculations failed"
-    assert portfolio_esg[0] == 680, "Weighted portfolio E score calculations failed"
+    assert portfolio_esg[0] == 680.0, "Weighted portfolio E score calculations failed"
     return "Passed","Passed"
 
 def backtest_test(x):
