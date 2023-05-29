@@ -145,7 +145,7 @@ def efficient_frontier(mu, cov, target, rf, bounds, returns, esg=None, score=Non
 
     return max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt
 
-def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', operator=None, esg=None, rf=None, score=None,get_plots = False): 
+def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start_date, end_date, time='y', operator=None, esg=None, rf=None, score=None,get_plots = False,upper_limit=800): 
     '''
     Computes the Max_sharp and ESG based on specified criteria and constraints. In this case all the stocks ESG scores needs do be over the tresholds to be in the optimal portfolio.
     Args:
@@ -179,7 +179,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
     assert score is None or isinstance(score,str), "Program failed: input 'score' not of type str"
     assert isinstance(get_plots,bool), "Program failed: input 'get_plots' not of type bool"
     
-    thresholds = range(0,800,25) # create a list of thresholds to iterate over
+    thresholds = range(0,upper_limit,25) # create a list of thresholds to iterate over
     Max_sharp = []
     ESG = []
     for i in thresholds:
@@ -199,7 +199,7 @@ def ESG_efficient_frontier(file_path, column_name, column_value, prefixes, start
 
 
 
-def ESG_efficient_frontier_gw(rf,returns,esg,score):
+def ESG_efficient_frontier_gw(rf,returns,esg,score,lower_limit = 400, upper_limit = 800):
     '''
     Computes the Efficient ESG Frontier based on specified criteria and constraints. In this case all the stocks weighted average ESG scores needs do be over threshold to be in the optimal portfolio.
 
@@ -216,7 +216,7 @@ def ESG_efficient_frontier_gw(rf,returns,esg,score):
     assert isinstance(returns,pd.DataFrame), "Program failed: input 'returns' not of type pandas.DataFrame"
     assert isinstance(esg,pd.DataFrame), "Program failed: input 'esg' not of type pandas.DataFrame"
     assert isinstance(score,str), "Program failed: input 'score' not of type str"
-    thresholds = range(400,800,25) # create a list of thresholds to iterate over
+    thresholds = range(lower_limit,upper_limit,25) # create a list of thresholds to iterate over
     
     last_optimal = None
     Max_sharp = []
