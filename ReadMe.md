@@ -1,4 +1,4 @@
-## ESG Efficient Frontier Bachelor Thesis
+## Sustainable Portfolio Management Bachelor Thesis
 This repository contains the code and report for a bachelor thesis on the efficient frontier and ESG in portfolio optimization.
 
 ### Introduction
