@@ -17,7 +17,7 @@ The backtest.py module is a comprehensive library that provides various function
 The Greenwashing Library provides a portfolio optimization algorithm specifically designed to tackle greenwashing practices.
 
 ### User Features Library
-The user_features_lib.py module is a versatile library designed to enhance user experience in financial applications. It includes functions for showcasing optimal weight campaigns and printing function comments. These features facilitate interaction, provide insights, and improve the usability of the library. By leveraging the user_features.py module, developers can create user-friendly and interactive financial applications.
+The user_features.py module is a versatile library designed to enhance user experience in financial applications. It includes functions for showcasing optimal weight campaigns and printing function comments. These features facilitate interaction, provide insights, and improve the usability of the library. By leveraging the user_features.py module, developers can create user-friendly and interactive financial applications.
 
 ### Ipynb
 In separate Jupyter Notebook files, different libraries are utilized to address distinct objectives. Each notebook focuses on specific tasks, leveraging various libraries tailored to data retrieval, strategy implementation, performance evaluation, risk analysis, and greenwashing detection, enabling comprehensive analysis and informed decision-making.
