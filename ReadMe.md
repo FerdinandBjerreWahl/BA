@@ -2,9 +2,7 @@
 This repository contains the code and report for a bachelor thesis on the efficient frontier and ESG in portfolio optimization.
 
 ### Introduction
-The efficient frontier is a concept in finance that represents the set of portfolios that offer the highest expected return for a given level of risk or the lowest risk for a given level of expected return. The efficient frontier is an important tool in portfolio optimization, as it helps investors to find the optimal portfolio that balances risk and return.
-
-In this thesis, we explore the efficient frontier using modern portfolio theory and different optimization techniques. We start by introducing the concept of the efficient frontier and explaining its importance in portfolio optimization.
+In this thesis, we explore the efficient frontier using modern portfolio theory and different optimization techniques. The efficient frontier is a concept in finance that represents the set of portfolios that offer the highest expected return for a given level of risk or the lowest risk for a given level of expected return. The efficient frontier is an important tool in portfolio optimization, as it helps investors to find the optimal portfolio that balances risk and return.
 
 ### Data
 To access the data and run the efficient frontier for ESG data implementation, please run the function get_filtered_stock_data() from the file DATA.py and run it in MAIN.ipynb. The get_filtered_stock_data() function is used to filter the stock data based on different criteria, which you can read more about in the file DATA.py.
