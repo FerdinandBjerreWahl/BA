@@ -24,3 +24,10 @@ In separate Jupyter Notebook files, different libraries are utilized to address 
 
 ### Conclusion
 In conclusion, this thesis provides an overview of the efficient frontier and its importance in portfolio optimization. We also demonstrate how ESG data can be incorporated into the construction of the efficient frontier. We hope that this thesis and the accompanying code will serve as a useful resource for those interested in portfolio optimization and ESG investing.
+
+### Requirements
+To run the code the user needs to install the required packages found in the requirements.txt and a notebook environment, such as jupyter notebook, Visual studio code or use google colab.
+Furhtermore the use needs to have installed the python language onto their machine. Python can be downloaded from: https://www.python.org/downloads/
+To install the packages download the repository onto your machine.
+From here either run the batch file called install_requirements.bat
+or open a terminal and navigate with the terminal to the repository folder and run the command pip install -r requirements.txt
