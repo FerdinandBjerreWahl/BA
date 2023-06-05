@@ -12,5 +12,11 @@ To access the data and run the efficient frontier for ESG data implementation, p
 ### Efficient Frontier
 The efficient_frontier.py module contains utility functions for portfolio optimization, including the construction of the efficient frontier using ESG data. You can also run this module in MAIN.ipynb.
 
+### Backtest Library
+The backtest.py module is a comprehensive library that provides various functions for conducting backtesting of investment strategies. It includes features such as data retrieval, strategy implementation, performance evaluation, and risk analysis. To utilize this library, simply import the module and call the desired functions in your code.
+
+### User Features Library
+The user_features_lib.py module is a versatile library designed to enhance user experience in financial applications. It includes functions for showcasing optimal weight campaigns and printing function comments. These features facilitate interaction, provide insights, and improve the usability of the library. By leveraging the user_features.py module, developers can create user-friendly and interactive financial applications.
+
 ### Conclusion
 In conclusion, this thesis provides an overview of the efficient frontier and its importance in portfolio optimization. We also demonstrate how ESG data can be incorporated into the construction of the efficient frontier. We hope that this thesis and the accompanying code will serve as a useful resource for those interested in portfolio optimization and ESG investing.
