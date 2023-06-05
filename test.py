@@ -17,6 +17,12 @@ from Effient_Frontier import ESG_efficient_frontier_gw
 from backtest import backtest
 from Greenwashing import greenwashing
 
+def passed_or_failed(x):
+    if x:
+        return "Passed"
+    else:
+        return "Failed"
+
 def mean_test(x):
     '''
     Performs a test on the mean calculations given a predefined return matrix x
@@ -26,8 +32,8 @@ def mean_test(x):
     df = pd.DataFrame(x)
     mean_array = df.mean().to_numpy()
     mean = np.array([4,5,6])
-    assert np.allclose(mean_array,mean), "The mean calculations failed"
-    return "Passed"
+    result = np.allclose(mean_array,mean)
+    return passed_or_failed(result)
     
 def cov_test(x):
     '''
@@ -40,8 +46,8 @@ def cov_test(x):
                 [9,9,9]])
     df = pd.DataFrame(x)
     cov = df.cov().to_numpy()
-    assert np.allclose(cov,covtest), "The covariance calculations failed"
-    return "Passed"
+    result = np.allclose(cov,covtest)
+    return passed_or_failed(result)
     
 def returns_test(x):
     '''
@@ -53,8 +59,8 @@ def returns_test(x):
     test_return = 5
     df = pd.DataFrame(x)
     mean = df.mean().to_numpy()
-    assert np.allclose(np.sum(weights @ mean),test_return), "The returns calculations failed"
-    return "Passed"
+    result = np.allclose(np.sum(weights @ mean),test_return)
+    return passed_or_failed(result)
     
 def deviation_test(x):
     '''
@@ -65,8 +71,8 @@ def deviation_test(x):
     df = pd.DataFrame(x)
     cov = df.cov().to_numpy()
     weights = np.array([1/3,1/3,1/3])
-    assert np.allclose(np.sqrt(weights.T @ cov @ weights),3), "The standard deviation calculations failed"
-    return "Passed"
+    result = np.allclose(np.sqrt(weights.T @ cov @ weights),3)
+    return passed_or_failed(result)
     
 def efficientfrontier_test(x):
     '''
@@ -113,9 +119,9 @@ def efficientfrontier_test(x):
     df = df.rename(columns={0: "US0268747849", 1: "US03027X1000",2: "US0304201033"})
     
     max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt = efficient_frontier(mean, cov, target, rf, bounds, df, esg=esg, score='environment_score',get_plots = False)
-    assert np.allclose(w_opt,np.array([0,0,1])), "The optimal weights calculations failed"
-    assert np.isclose(portfolio_esg[0],680.0), "Weighted portfolio E score calculations failed"
-    return "Passed","Passed"
+    result1 = np.allclose(w_opt,np.array([0,0,1]))
+    result2 = np.isclose(portfolio_esg[0],680.0)
+    return passed_or_failed(result1),passed_or_failed(result2)
 
 def backtest_test(x):
     '''
@@ -163,8 +169,8 @@ def backtest_test(x):
     bt = backtest(rf,esg,df,score,window,get_plots=get_plots,num=None, test = True)
     
     btnp = bt.to_numpy()
-    assert np.allclose(result,btnp), "Backtest calculations failed"
-    return "Passed"
+    result = np.allclose(result,btnp)
+    return passed_or_failed(result)
 
 def optimizer_test(x):
     '''
@@ -185,8 +191,8 @@ def optimizer_test(x):
     rf = 0.0
     
     max_sharpe_ret, max_sharpe_vol, max_sharpe_sr, portfolio_esg, frontier, mu, stdevs_ , w_opt = efficient_frontier(mean, cov, target, rf, bounds, df, esg=None, score=None,get_plots = False)
-    assert np.allclose(w_opt,np.array([1,0,0])), "The optimizer test failed"
-    return "Passed"
+    result = np.allclose(w_opt,np.array([1,0,0]))
+    return passed_or_failed(result)
     
 def test_all():
     '''
@@ -211,6 +217,11 @@ def test_all():
     'Weighted E score of portfolio': efficientfrontier_test(x)[1],
     'Backtest calculations':  backtest_test(x),
     'All tests': 'Passed'}
+    
+    for test, result in test_results.items():
+        if result == 'Failed':
+            test_results['All tests'] = 'Failed'
+            break
     
     max_width = max(len(test_name)+3 for test_name in test_results.keys())
 
