@@ -1,0 +1,31 @@
+name: Python test 3.9
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
+jobs:
+  test_3_9:
+    name: Run Tests with Python 3.9
+    runs-on: windows-latest  # Specify the Windows runner environment
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Checkout the repository code
+
+      - name: Set Up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+          
+      - name: List Files
+        run: ls $GITHUB_WORKSPACE
+        
+      - name: Install Dependencies
+        run: pip install -r requirements.txt  # Install project dependencies
+
+      - name: Run Tests
+        run: |
+          python test.py --file $GITHUB_WORKSPACE/ESG_US.csv
+
